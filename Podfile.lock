@@ -1,5 +1,7 @@
 PODS:
   - Kingfisher (7.9.1)
+  - Networking (0.1.0)
+  - Platform (0.1.0)
   - RxCocoa (6.6.0):
     - RxRelay (= 6.6.0)
     - RxSwift (= 6.6.0)
@@ -10,6 +12,8 @@ PODS:
 
 DEPENDENCIES:
   - Kingfisher (~> 7.0)
+  - Networking (from `./LocalPods/Networking`)
+  - Platform (from `./LocalPods/Platform`)
   - RxCocoa (= 6.6.0)
   - RxSwift (= 6.6.0)
   - SnapKit (~> 5.0)
@@ -22,13 +26,21 @@ SPEC REPOS:
     - RxSwift
     - SnapKit
 
+EXTERNAL SOURCES:
+  Networking:
+    :path: "./LocalPods/Networking"
+  Platform:
+    :path: "./LocalPods/Platform"
+
 SPEC CHECKSUMS:
   Kingfisher: 1d14e9f59cbe19389f591c929000332bf70efd32
+  Networking: 5515dfc4eac322874abba6736228c5ae32d5715c
+  Platform: 715dd6e6441dac41c81aba2b6c00a105664c5ec5
   RxCocoa: 44a80de90e25b739b5aeaae3c8c371a32e3343cc
   RxRelay: 45eaa5db8ee4fb50e5ebd57deec0159e97fa51e6
   RxSwift: a4b44f7d24599f674deebd1818eab82e58410632
   SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
 
-PODFILE CHECKSUM: 4f132ab80d3353ff4bf8eb485894afac1b9b7dd1
+PODFILE CHECKSUM: 25341c07653be6592c4e8d36e15ca5e3f4d87911
 
 COCOAPODS: 1.14.3

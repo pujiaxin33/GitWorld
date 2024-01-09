@@ -9,6 +9,9 @@ target 'GitWorld' do
   pod 'RxSwift', '6.6.0'
   pod 'RxCocoa', '6.6.0'
 
+  # Local pods
+  pod 'Networking', :path => './LocalPods/Networking'
+  pod 'Platform', :path => './LocalPods/Platform'
 
   target 'GitWorldTests' do
     inherit! :search_paths
