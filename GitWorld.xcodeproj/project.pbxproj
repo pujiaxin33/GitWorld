@@ -101,7 +101,6 @@
 				C9E965CB4E175543C479B284 /* Pods-GitWorldTests.debug.xcconfig */,
 				84A0F85BD32A789A06041C70 /* Pods-GitWorldTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -140,13 +139,11 @@
 		B21533962B4D1C2F00C99FC6 /* GitWorld */ = {
 			isa = PBXGroup;
 			children = (
-				B21533972B4D1C2F00C99FC6 /* AppDelegate.swift */,
-				B21533992B4D1C2F00C99FC6 /* SceneDelegate.swift */,
-				B215339B2B4D1C2F00C99FC6 /* ViewController.swift */,
-				B215339D2B4D1C2F00C99FC6 /* Main.storyboard */,
-				B21533A02B4D1C3200C99FC6 /* Assets.xcassets */,
-				B21533A22B4D1C3200C99FC6 /* LaunchScreen.storyboard */,
-				B21533A52B4D1C3200C99FC6 /* Info.plist */,
+				B258ED9E2B4D2B4900A8F5AD /* Application */,
+				B258ED9F2B4D2B5800A8F5AD /* Scenes */,
+				B258EDA02B4D2B6200A8F5AD /* Domain */,
+				B258EDA12B4D2B6D00A8F5AD /* Data */,
+				B258ED9D2B4D2AE000A8F5AD /* Resources */,
 			);
 			path = GitWorld;
 			sourceTree = "<group>";
@@ -166,6 +163,80 @@
 				B21533BA2B4D1C3200C99FC6 /* GitWorldUITestsLaunchTests.swift */,
 			);
 			path = GitWorldUITests;
+			sourceTree = "<group>";
+		};
+		B258ED9D2B4D2AE000A8F5AD /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B215339D2B4D1C2F00C99FC6 /* Main.storyboard */,
+				B21533A02B4D1C3200C99FC6 /* Assets.xcassets */,
+				B21533A22B4D1C3200C99FC6 /* LaunchScreen.storyboard */,
+				B21533A52B4D1C3200C99FC6 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		B258ED9E2B4D2B4900A8F5AD /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				B21533972B4D1C2F00C99FC6 /* AppDelegate.swift */,
+				B21533992B4D1C2F00C99FC6 /* SceneDelegate.swift */,
+				B215339B2B4D1C2F00C99FC6 /* ViewController.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		B258ED9F2B4D2B5800A8F5AD /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		B258EDA02B4D2B6200A8F5AD /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				B258EDA42B4D2B9900A8F5AD /* UseCases */,
+				B258EDA32B4D2B9000A8F5AD /* Entities */,
+				B258EDA22B4D2B8400A8F5AD /* Repositories */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		B258EDA12B4D2B6D00A8F5AD /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				B258EDA52B4D2BB900A8F5AD /* Repositories */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		B258EDA22B4D2B8400A8F5AD /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		B258EDA32B4D2B9000A8F5AD /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		B258EDA42B4D2B9900A8F5AD /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		B258EDA52B4D2BB900A8F5AD /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Repositories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -558,7 +629,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = UNR72UUVF4;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = GitWorld/Info.plist;
+				INFOPLIST_FILE = GitWorld/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -587,7 +658,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = UNR72UUVF4;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = GitWorld/Info.plist;
+				INFOPLIST_FILE = GitWorld/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
