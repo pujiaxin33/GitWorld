@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import Platform
 
 final class AppCoordinator {
     private let dependencies: AppDependencies
@@ -24,17 +25,17 @@ final class AppCoordinator {
         
         let activityNavigationController = UINavigationController()
         activityNavigationController.tabBarItem = .init(title: "活动", image: .init(systemName: "bell"), selectedImage: nil)
-        let activityVC = UIViewController()
+        let activityVC = BaseViewController()
         activityVC.title = "活动"
         activityNavigationController.viewControllers = [activityVC]
         
         let settingsNavigationController = UINavigationController()
-        settingsNavigationController.tabBarItem = .init(title: "设置", image: .init(systemName: "bell"), selectedImage: nil)
-        let settingsVC = UIViewController()
+        settingsNavigationController.tabBarItem = .init(title: "设置", image: .init(systemName: "gearshape"), selectedImage: nil)
+        let settingsVC = BaseViewController()
         settingsVC.title = "活动"
         settingsNavigationController.viewControllers = [settingsVC]
         
-        let tabBarController = UITabBarController()
+        let tabBarController = BaseTabBarController()
         tabBarController.viewControllers = [
             searchNavigationController,
             activityNavigationController,

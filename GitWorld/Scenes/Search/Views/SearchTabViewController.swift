@@ -16,7 +16,7 @@ class SearchTabViewController: BaseViewController {
     private lazy var searchButton: UIButton = {
         let button = UIButton()
         button.setTitle("搜索", for: .normal)
-//        button.addTarget(self, action: #selector(onClickSearchButton), for: .touchUpInside)
+        button.setTitleColor(.black, for: .normal)
         return button
     }()
     
@@ -37,7 +37,7 @@ class SearchTabViewController: BaseViewController {
     }
     
     private func setupViews() {
-        self.title = "搜索🔍"
+        self.title = "搜索"
         
         view.addSubview(searchButton)
         searchButton.snp.makeConstraints { make in
