@@ -26,7 +26,7 @@ final class SearchTabCoordinator {
 }
 
 extension SearchTabCoordinator: SearchTabNavigator {
-    func showRepositoryDetail(_ model: RepositoryModel) {
+    func showRepositoryDetail(_ model: RepositoryEntity) {
         
     }
 }

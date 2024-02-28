@@ -47,7 +47,7 @@ class SearchTabViewController: BaseViewController {
     
     private func setupBindings() {
         let searchRepositoryDriver = searchButton.rx.tap.do { _ in
-            print("show loading")
+            LoadingView.show()
         }.map { "swift" }.asDriver(onErrorJustReturn: "")
     
         let input = SearchTabViewModel.Input(searchRepository: searchRepositoryDriver)
@@ -55,10 +55,11 @@ class SearchTabViewController: BaseViewController {
         output.repositories.drive { [weak self] result in
             switch result {
             case .success(let items):
-                print("成功了")
+                LoadingView.succeed("请求成功了")
                 print(items)
             case .failure(let error):
                 print(error.localizedDescription)
+                LoadingView.hide()
             }
         }.disposed(by: bags)
     }

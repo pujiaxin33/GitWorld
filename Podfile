@@ -10,6 +10,7 @@ target 'GitWorld' do
   pod 'RxCocoa', '6.6.0'
   pod 'Moya', '~> 15.0'
   pod 'Moya/RxSwift', '~> 15.0'
+  pod 'ProgressHUD', '14.1.0'
 
   # Local pods
   pod 'Networking', :path => './LocalPods/Networking'

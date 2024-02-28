@@ -8,5 +8,5 @@
 import Foundation
 
 protocol SearchTabNavigator {
-    func showRepositoryDetail(_ model: RepositoryModel)
+    func showRepositoryDetail(_ model: RepositoryEntity)
 }

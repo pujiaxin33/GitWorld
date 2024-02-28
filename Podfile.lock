@@ -12,7 +12,9 @@ PODS:
     - Moya (~> 15.0)
     - Moya/RxSwift (~> 15.0)
     - RxSwift (= 6.6.0)
-  - Platform (0.1.0)
+  - Platform (0.1.0):
+    - ProgressHUD
+  - ProgressHUD (14.1.0)
   - RxCocoa (6.6.0):
     - RxRelay (= 6.6.0)
     - RxSwift (= 6.6.0)
@@ -27,6 +29,7 @@ DEPENDENCIES:
   - Moya/RxSwift (~> 15.0)
   - Networking (from `./LocalPods/Networking`)
   - Platform (from `./LocalPods/Platform`)
+  - ProgressHUD (= 14.1.0)
   - RxCocoa (= 6.6.0)
   - RxSwift (= 6.6.0)
   - SnapKit (~> 5.0)
@@ -36,6 +39,7 @@ SPEC REPOS:
     - Alamofire
     - Kingfisher
     - Moya
+    - ProgressHUD
     - RxCocoa
     - RxRelay
     - RxSwift
@@ -51,13 +55,14 @@ SPEC CHECKSUMS:
   Alamofire: 0e92e751b3e9e66d7982db43919d01f313b8eb91
   Kingfisher: 1d14e9f59cbe19389f591c929000332bf70efd32
   Moya: 138f0573e53411fb3dc17016add0b748dfbd78ee
-  Networking: 6f75d6e90408c01863d467387b5c73220443e0c5
-  Platform: 715dd6e6441dac41c81aba2b6c00a105664c5ec5
+  Networking: 0c930856b6ce649b4f10757a191974594542838b
+  Platform: 1000573cd1657f12d56e450ccc6b28de0b8c7815
+  ProgressHUD: c4a55f108815c46a6bf082407d2f806840b7a869
   RxCocoa: 44a80de90e25b739b5aeaae3c8c371a32e3343cc
   RxRelay: 45eaa5db8ee4fb50e5ebd57deec0159e97fa51e6
   RxSwift: a4b44f7d24599f674deebd1818eab82e58410632
   SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
 
-PODFILE CHECKSUM: 5234aa57a07669b5b219fe76bf838b234dba9ddb
+PODFILE CHECKSUM: d4018b4efa9e914f95e52b917c5562f01c203ff7
 
 COCOAPODS: 1.15.2
