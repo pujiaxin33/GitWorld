@@ -18,7 +18,6 @@
 		B27CB3AB2B689C8500742E3D /* SearchTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27CB3AA2B689C8500742E3D /* SearchTabViewController.swift */; };
 		B27CB3AD2B689D3E00742E3D /* SearchTabViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27CB3AC2B689D3E00742E3D /* SearchTabViewModel.swift */; };
 		B27CB3AF2B689DC300742E3D /* RepositoryEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27CB3AE2B689DC300742E3D /* RepositoryEntity.swift */; };
-		B2895E1D2B8EDB6400F41FFD /* RepositoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2895E1C2B8EDB6400F41FFD /* RepositoryModel.swift */; };
 		B2895E1F2B8EDBEC00F41FFD /* SearchTabRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2895E1E2B8EDBEC00F41FFD /* SearchTabRepository.swift */; };
 		B2895E212B8EDC2F00F41FFD /* StandardSearchTabRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2895E202B8EDC2F00F41FFD /* StandardSearchTabRepository.swift */; };
 		B2AFC3122B888C21003BE5D5 /* AppAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2AFC3112B888C21003BE5D5 /* AppAppearance.swift */; };
@@ -72,7 +71,6 @@
 		B27CB3AA2B689C8500742E3D /* SearchTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTabViewController.swift; sourceTree = "<group>"; };
 		B27CB3AC2B689D3E00742E3D /* SearchTabViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTabViewModel.swift; sourceTree = "<group>"; };
 		B27CB3AE2B689DC300742E3D /* RepositoryEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryEntity.swift; sourceTree = "<group>"; };
-		B2895E1C2B8EDB6400F41FFD /* RepositoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryModel.swift; sourceTree = "<group>"; };
 		B2895E1E2B8EDBEC00F41FFD /* SearchTabRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTabRepository.swift; sourceTree = "<group>"; };
 		B2895E202B8EDC2F00F41FFD /* StandardSearchTabRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardSearchTabRepository.swift; sourceTree = "<group>"; };
 		B2AFC3112B888C21003BE5D5 /* AppAppearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAppearance.swift; sourceTree = "<group>"; };
@@ -298,7 +296,6 @@
 		B27CB3A12B68987300742E3D /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				B2895E1C2B8EDB6400F41FFD /* RepositoryModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -526,7 +523,6 @@
 				B27CB3AD2B689D3E00742E3D /* SearchTabViewModel.swift in Sources */,
 				B2AFC31F2B8893EB003BE5D5 /* AppCoordinator.swift in Sources */,
 				B27CB3AF2B689DC300742E3D /* RepositoryEntity.swift in Sources */,
-				B2895E1D2B8EDB6400F41FFD /* RepositoryModel.swift in Sources */,
 				B21533982B4D1C2F00C99FC6 /* AppDelegate.swift in Sources */,
 				B2895E1F2B8EDBEC00F41FFD /* SearchTabRepository.swift in Sources */,
 				B215339A2B4D1C2F00C99FC6 /* SceneDelegate.swift in Sources */,

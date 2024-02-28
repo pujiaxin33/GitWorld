@@ -18,7 +18,7 @@ class SearchTabViewModel: ViewModelType {
     }
     
     struct Output {
-        let repositories: Driver<Result<[RepositoryModel], HttpError>>
+        let repositories: Driver<Result<[RepositoryEntity], HttpError>>
     }
     
     private let useCase: SearchTabUseCase
@@ -31,12 +31,20 @@ class SearchTabViewModel: ViewModelType {
     
     
     func transform(_ input: Input) -> Output {
-        let repositories = input.searchRepository.flatMapLatest {_ in 
+        let repositories = input.searchRepository.flatMapLatest { keyword in
             return self.useCase
-                .requestRepositoriesList()
+                .requestRepositoriesList(keyword)
                 .map { result in
-                    return Result<[RepositoryModel], HttpError>.success(result)
-                }.asDriver(onErrorJustReturn: .failure(.serverError))
+                    return Result<[RepositoryEntity], HttpError>.success(result)
+                }
+                .catch { error in
+                    print(error)
+                    return Observable.create { observer in
+                        observer.onNext(Result<[RepositoryEntity], HttpError>.failure(HttpError.serverError))
+                        return Disposables.create {}
+                    }
+                }
+                .asDriver(onErrorJustReturn: .failure(HttpError.serverError))
         }
         
         return Output(repositories: repositories)

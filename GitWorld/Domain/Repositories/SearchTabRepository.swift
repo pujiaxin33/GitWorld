@@ -9,5 +9,5 @@ import Foundation
 import RxSwift
 
 protocol SearchTabRepository {
-    func requestRepositoriesList() -> Observable<[RepositoryEntity]>
+    func requestRepositoriesList(_ keyWord: String) -> Observable<[RepositoryEntity]>
 }

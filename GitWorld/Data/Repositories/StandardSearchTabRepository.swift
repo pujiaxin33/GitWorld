@@ -16,10 +16,11 @@ class StandardSearchTabRepository: SearchTabRepository {
         self.apiClient = apiClient
     }
     
-    func requestRepositoriesList() -> Observable<[RepositoryEntity]> {
-        let endpoint = StandardApiEndpoint(method: .get, path: "repositories", headers: nil, params: nil)
-        return apiClient.request(endpoint)
+    func requestRepositoriesList(_ keyWord: String) -> Observable<[RepositoryEntity]> {
+        let ob: Observable<RepositoryResult> = apiClient.request(.repositories(keyWord))
+        return ob.map { result in
+            result.items ?? []
+        }
     }
-    
     
 }

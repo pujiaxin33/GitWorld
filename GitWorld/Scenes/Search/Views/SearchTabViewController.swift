@@ -54,10 +54,11 @@ class SearchTabViewController: BaseViewController {
         let output = viewModel.transform(input)
         output.repositories.drive { [weak self] result in
             switch result {
-            case .success(_):
+            case .success(let items):
                 print("成功了")
+                print(items)
             case .failure(let error):
-                print("error")
+                print(error.localizedDescription)
             }
         }.disposed(by: bags)
     }

@@ -39,4 +39,6 @@ TODO: Add long description of the pod here.
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
    s.dependency 'RxSwift', '6.6.0'
+   s.dependency 'Moya', '~> 15.0'
+   s.dependency 'Moya/RxSwift', '~> 15.0'
 end

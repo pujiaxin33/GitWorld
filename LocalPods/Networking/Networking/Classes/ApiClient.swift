@@ -1,6 +1,7 @@
 
 import RxSwift
 import UIKit
+import Moya
 
 public enum HttpError: Error {
     case serverError
@@ -8,19 +9,18 @@ public enum HttpError: Error {
 }
 
 public protocol ApiClient {
-    func request<T: Decodable>(_ endpoint: ApiEndpoint) -> Observable<T>
+    func request<T: Decodable>(_ endpoint: ApiEndpointTargetType) -> Observable<T>
 }
 
 public class StandardApiClient: ApiClient {
     private let baseUrl: String
+    private let provider = MoyaProvider<ApiEndpointTargetType>()
     public init(baseUrl: String) {
         self.baseUrl = baseUrl
+        
     }
     
-    public func request<T: Decodable>(_ endpoint: ApiEndpoint) -> Observable<T> {
-        return .create { observer in
-            observer.onError(HttpError.serverError)
-            return Disposables.create {}
-        }.delay(.seconds(2), scheduler: MainScheduler.asyncInstance)
+    public func request<T: Decodable>(_ endpoint: ApiEndpointTargetType) -> Observable<T> {
+        return provider.rx.request(endpoint).map(T.self).asObservable()
     }
 }
