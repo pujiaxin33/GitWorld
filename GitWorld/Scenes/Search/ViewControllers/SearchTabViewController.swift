@@ -19,6 +19,11 @@ class SearchTabViewController: BaseViewController {
         button.setTitleColor(.black, for: .normal)
         return button
     }()
+    lazy var tableView: UITableView = {
+        let tableView = UITableView(frame: .zero, style: .plain)
+        return tableView
+    }()
+    var repositoryList: [RepositoryEntity] = []
     
     init(viewModel: SearchTabViewModel) {
         self.viewModel = viewModel
@@ -39,9 +44,15 @@ class SearchTabViewController: BaseViewController {
     private func setupViews() {
         self.title = "搜索"
         
+        setupTableView()
+        view.addSubview(tableView)
         view.addSubview(searchButton)
+        
         searchButton.snp.makeConstraints { make in
             make.center.equalToSuperview()
+        }
+        tableView.snp.makeConstraints { make in
+            make.edges.equalToSuperview()
         }
     }
     
@@ -56,7 +67,8 @@ class SearchTabViewController: BaseViewController {
             switch result {
             case .success(let items):
                 LoadingView.succeed("请求成功了")
-                print(items)
+                self?.repositoryList = items
+                self?.tableView.reloadData()
             case .failure(let error):
                 print(error.localizedDescription)
                 LoadingView.hide()

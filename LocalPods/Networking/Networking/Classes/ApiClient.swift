@@ -6,6 +6,7 @@ import Moya
 public enum HttpError: Error {
     case serverError
     case invalidDataError(Error?)
+    case someError(Error?)
 }
 
 public protocol ApiClient {

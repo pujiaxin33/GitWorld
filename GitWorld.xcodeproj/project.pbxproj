@@ -20,6 +20,8 @@
 		B27CB3AF2B689DC300742E3D /* RepositoryEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27CB3AE2B689DC300742E3D /* RepositoryEntity.swift */; };
 		B2895E1F2B8EDBEC00F41FFD /* SearchTabRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2895E1E2B8EDBEC00F41FFD /* SearchTabRepository.swift */; };
 		B2895E212B8EDC2F00F41FFD /* StandardSearchTabRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2895E202B8EDC2F00F41FFD /* StandardSearchTabRepository.swift */; };
+		B2895E422B8F309D00F41FFD /* SearchTabViewController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2895E412B8F309D00F41FFD /* SearchTabViewController+TableView.swift */; };
+		B2895E452B8F31A200F41FFD /* RepositoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2895E442B8F31A200F41FFD /* RepositoryCell.swift */; };
 		B2AFC3122B888C21003BE5D5 /* AppAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2AFC3112B888C21003BE5D5 /* AppAppearance.swift */; };
 		B2AFC3172B888E12003BE5D5 /* AppConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2AFC3162B888E12003BE5D5 /* AppConfiguration.swift */; };
 		B2AFC3192B88929D003BE5D5 /* AppDependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2AFC3182B88929D003BE5D5 /* AppDependencies.swift */; };
@@ -73,6 +75,8 @@
 		B27CB3AE2B689DC300742E3D /* RepositoryEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryEntity.swift; sourceTree = "<group>"; };
 		B2895E1E2B8EDBEC00F41FFD /* SearchTabRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTabRepository.swift; sourceTree = "<group>"; };
 		B2895E202B8EDC2F00F41FFD /* StandardSearchTabRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardSearchTabRepository.swift; sourceTree = "<group>"; };
+		B2895E412B8F309D00F41FFD /* SearchTabViewController+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SearchTabViewController+TableView.swift"; sourceTree = "<group>"; };
+		B2895E442B8F31A200F41FFD /* RepositoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryCell.swift; sourceTree = "<group>"; };
 		B2AFC3112B888C21003BE5D5 /* AppAppearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAppearance.swift; sourceTree = "<group>"; };
 		B2AFC3162B888E12003BE5D5 /* AppConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfiguration.swift; sourceTree = "<group>"; };
 		B2AFC3182B88929D003BE5D5 /* AppDependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDependencies.swift; sourceTree = "<group>"; };
@@ -280,6 +284,7 @@
 				B2AFC3202B889418003BE5D5 /* Coordinator */,
 				B27CB3A22B68987B00742E3D /* ViewModels */,
 				B27CB3A12B68987300742E3D /* Models */,
+				B2895E432B8F317400F41FFD /* ViewControllers */,
 				B27CB3A02B68986A00742E3D /* Views */,
 			);
 			path = Search;
@@ -288,7 +293,7 @@
 		B27CB3A02B68986A00742E3D /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				B27CB3AA2B689C8500742E3D /* SearchTabViewController.swift */,
+				B2895E442B8F31A200F41FFD /* RepositoryCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -306,6 +311,15 @@
 				B27CB3AC2B689D3E00742E3D /* SearchTabViewModel.swift */,
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		B2895E432B8F317400F41FFD /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				B27CB3AA2B689C8500742E3D /* SearchTabViewController.swift */,
+				B2895E412B8F309D00F41FFD /* SearchTabViewController+TableView.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 		B2AFC3202B889418003BE5D5 /* Coordinator */ = {
@@ -532,7 +546,9 @@
 				B27CB3AB2B689C8500742E3D /* SearchTabViewController.swift in Sources */,
 				B2AFC3242B889443003BE5D5 /* SearchTabNavigator.swift in Sources */,
 				B2895E212B8EDC2F00F41FFD /* StandardSearchTabRepository.swift in Sources */,
+				B2895E422B8F309D00F41FFD /* SearchTabViewController+TableView.swift in Sources */,
 				B2AFC3262B88964D003BE5D5 /* SearchTabUseCase.swift in Sources */,
+				B2895E452B8F31A200F41FFD /* RepositoryCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

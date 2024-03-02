@@ -34,19 +34,28 @@ class SearchTabViewModel: ViewModelType {
         let repositories = input.searchRepository.flatMapLatest { keyword in
             return self.useCase
                 .requestRepositoriesList(keyword)
-                .map { result in
+                .mapToResult { result in
                     return Result<[RepositoryEntity], HttpError>.success(result)
                 }
-                .catch { error in
-                    print(error)
-                    return Observable.create { observer in
-                        observer.onNext(Result<[RepositoryEntity], HttpError>.failure(HttpError.serverError))
-                        return Disposables.create {}
-                    }
-                }
+//                .map { result in
+//                    return Result<[RepositoryEntity], HttpError>.success(result)
+//                }
+//                .catch { error in
+//                    Observable.just(Result.failure(HttpError.someError(error)))
+//                }
                 .asDriver(onErrorJustReturn: .failure(HttpError.serverError))
         }
         
         return Output(repositories: repositories)
+    }
+}
+
+extension ObservableType {
+    func mapToResult<T>(_ transform: @escaping (Element) throws -> Result<T, HttpError>) -> Observable<Result<T, HttpError>> {
+        return self.map { e in
+            try transform(e)
+        }.catch { error in
+            Observable.just(Result.failure(HttpError.someError(error)))
+        }
     }
 }
