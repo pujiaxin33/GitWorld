@@ -14,6 +14,7 @@ PODS:
     - RxSwift (= 6.6.0)
   - Platform (0.1.0):
     - ProgressHUD
+    - RxSwift (= 6.6.0)
   - ProgressHUD (14.1.0)
   - RxCocoa (6.6.0):
     - RxRelay (= 6.6.0)
@@ -56,7 +57,7 @@ SPEC CHECKSUMS:
   Kingfisher: 1d14e9f59cbe19389f591c929000332bf70efd32
   Moya: 138f0573e53411fb3dc17016add0b748dfbd78ee
   Networking: 0c930856b6ce649b4f10757a191974594542838b
-  Platform: 1000573cd1657f12d56e450ccc6b28de0b8c7815
+  Platform: 262929154fd300a31cf42d00851d7501cdc439b6
   ProgressHUD: c4a55f108815c46a6bf082407d2f806840b7a869
   RxCocoa: 44a80de90e25b739b5aeaae3c8c371a32e3343cc
   RxRelay: 45eaa5db8ee4fb50e5ebd57deec0159e97fa51e6
