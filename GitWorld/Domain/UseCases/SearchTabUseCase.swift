@@ -9,7 +9,7 @@ import Foundation
 import RxSwift
 
 protocol SearchTabUseCase {
-    func requestRepositoriesList(_ keyWord: String) -> Observable<[RepositoryEntity]>
+    func requestRepositoriesList(keyWord: String, pageIndex: Int) -> Observable<[RepositoryEntity]>
 }
 
 class StandardSearchTabUseCase: SearchTabUseCase {
@@ -19,8 +19,8 @@ class StandardSearchTabUseCase: SearchTabUseCase {
         self.repository = repository
     }
     
-    func requestRepositoriesList(_ keyWord: String) -> Observable<[RepositoryEntity]> {
+    func requestRepositoriesList(keyWord: String, pageIndex: Int) -> Observable<[RepositoryEntity]> {
         return repository
-            .requestRepositoriesList(keyWord)
+            .requestRepositoriesList(keyWord: keyWord, pageIndex: pageIndex)
     }
 }

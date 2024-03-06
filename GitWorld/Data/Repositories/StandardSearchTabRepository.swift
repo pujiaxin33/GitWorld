@@ -16,8 +16,8 @@ class StandardSearchTabRepository: SearchTabRepository {
         self.apiClient = apiClient
     }
     
-    func requestRepositoriesList(_ keyWord: String) -> Observable<[RepositoryEntity]> {
-        let ob: Observable<RepositoryResult> = apiClient.request(.repositories(keyWord))
+    func requestRepositoriesList(keyWord: String, pageIndex: Int) -> Observable<[RepositoryEntity]> {
+        let ob: Observable<RepositoryResult> = apiClient.request(.repositories(keyWord, pageIndex))
         return ob.map { result in
             result.items ?? []
         }

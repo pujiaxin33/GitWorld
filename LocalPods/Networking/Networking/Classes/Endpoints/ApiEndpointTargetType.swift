@@ -10,7 +10,7 @@ import Moya
 
 
 public enum ApiEndpointTargetType {
-    case repositories(String)
+    case repositories(String, Int)
 }
 
 extension ApiEndpointTargetType: TargetType {
@@ -27,15 +27,15 @@ extension ApiEndpointTargetType: TargetType {
     
     public var method: Moya.Method {
         switch self {
-        case .repositories(_):
+        case .repositories:
             return .get
         }
     }
     
     public var task: Moya.Task {
         switch self {
-        case .repositories(let string):
-            return .requestParameters(parameters: ["q": string], encoding: URLEncoding.default)
+        case let .repositories(string, index):
+            return .requestParameters(parameters: ["q": string, "page" : index], encoding: URLEncoding.default)
         }
     }
     
