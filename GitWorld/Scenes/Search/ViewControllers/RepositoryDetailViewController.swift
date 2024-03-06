@@ -7,8 +7,9 @@
 
 import UIKit
 import WebKit
+import Platform
 
-class RepositoryDetailViewController: UIViewController {
+class RepositoryDetailViewController: BaseViewController {
     private let viewModel: RepositoryDetailViewModel
     lazy var progressLine: LoadingProgressLine = {
         let line = LoadingProgressLine()
@@ -29,7 +30,6 @@ class RepositoryDetailViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -41,8 +41,7 @@ class RepositoryDetailViewController: UIViewController {
             make.edges.equalToSuperview()
         }
         progressLine.snp.makeConstraints { make in
-            make.top.equalTo(view.safeAreaLayoutGuide.snp.top)
-            make.leading.trailing.equalToSuperview()
+            make.top.leading.trailing.equalToSuperview()
             make.height.equalTo(5)
         }
         
