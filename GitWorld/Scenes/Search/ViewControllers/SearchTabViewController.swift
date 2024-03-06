@@ -13,16 +13,17 @@ import SnapKit
 class SearchTabViewController: BaseViewController {
     private let viewModel: SearchTabViewModel
     private var bags: DisposeBag = .init()
-    private lazy var searchButton: UIButton = {
-        let button = UIButton()
-        button.setTitle("搜索", for: .normal)
-        button.setTitleColor(.black, for: .normal)
-        return button
+    private var searchBar: UISearchController = {
+        let sb = UISearchController()
+        sb.searchBar.placeholder = "Enter repository name"
+        sb.searchBar.searchBarStyle = .minimal
+        return sb
     }()
     lazy var tableView: UITableView = {
         let tableView = UITableView(frame: .zero, style: .plain)
         return tableView
     }()
+    private var searchResultSubject: PublishSubject<String> = .init()
     var repositoryList: [RepositoryEntity] = []
     
     init(viewModel: SearchTabViewModel) {
@@ -44,22 +45,20 @@ class SearchTabViewController: BaseViewController {
     private func setupViews() {
         self.title = "搜索"
         
+        searchBar.searchResultsUpdater = self
+        navigationItem.searchController = searchBar
         setupTableView()
         view.addSubview(tableView)
-        view.addSubview(searchButton)
         
-        searchButton.snp.makeConstraints { make in
-            make.center.equalToSuperview()
-        }
         tableView.snp.makeConstraints { make in
             make.edges.equalToSuperview()
         }
     }
     
     private func setupBindings() {
-        let searchRepositoryDriver = searchButton.rx.tap.do { _ in
-            LoadingView.show()
-        }.map { "swift" }.asDriver(onErrorJustReturn: "")
+        let searchRepositoryDriver = searchResultSubject
+            .debounce(.seconds(1), scheduler: MainScheduler.instance)
+            .asDriver(onErrorJustReturn: "")
     
         let input = SearchTabViewModel.Input(searchRepository: searchRepositoryDriver)
         let output = viewModel.transform(input)
@@ -74,5 +73,13 @@ class SearchTabViewController: BaseViewController {
                 LoadingView.hide()
             }
         }.disposed(by: bags)
+    }
+}
+
+extension SearchTabViewController: UISearchResultsUpdating {
+    
+    func updateSearchResults(for searchController: UISearchController) {
+        guard let query = searchController.searchBar.text, !query.isEmpty else { return }
+        searchResultSubject.onNext(query)
     }
 }
