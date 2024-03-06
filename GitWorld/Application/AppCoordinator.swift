@@ -26,12 +26,14 @@ final class AppCoordinator {
         let activityNavigationController = UINavigationController()
         activityNavigationController.tabBarItem = .init(title: "活动", image: .init(systemName: "bell"), selectedImage: nil)
         let activityVC = BaseViewController()
+        activityVC.hidesBottomBarWhenPushed = true
         activityVC.title = "活动"
         activityNavigationController.viewControllers = [activityVC]
         
         let settingsNavigationController = UINavigationController()
         settingsNavigationController.tabBarItem = .init(title: "设置", image: .init(systemName: "gearshape"), selectedImage: nil)
         let settingsVC = BaseViewController()
+        settingsVC.hidesBottomBarWhenPushed = true
         settingsVC.title = "活动"
         settingsNavigationController.viewControllers = [settingsVC]
         

@@ -29,7 +29,6 @@ class SearchTabViewModel: ViewModelType {
         self.navigator = navigator
     }
     
-    
     func transform(_ input: Input) -> Output {
         let repositories = input.searchRepository.flatMapLatest { keyword in
             return self.useCase
@@ -41,5 +40,9 @@ class SearchTabViewModel: ViewModelType {
         }
         
         return Output(repositories: repositories)
+    }
+    
+    func pushToRepositoryDetail(_ model: RepositoryEntity) {
+        navigator.pushToRepositoryDetail(model)
     }
 }

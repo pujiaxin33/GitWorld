@@ -12,14 +12,15 @@ extension SearchTabViewController {
     func setupTableView() {
         tableView.delegate = self
         tableView.dataSource = self
-//        tableView.estimatedRowHeight = 50
         tableView.register(RepositoryCell.self, forCellReuseIdentifier: RepositoryCell.reuseIdentifier)
-        
     }
 }
 
 extension SearchTabViewController: UITableViewDelegate {
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let entity = repositoryList[indexPath.row]
+        viewModel.pushToRepositoryDetail(entity)
+    }
 }
 
 extension SearchTabViewController: UITableViewDataSource {

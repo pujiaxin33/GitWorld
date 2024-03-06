@@ -11,7 +11,7 @@ import RxSwift
 import SnapKit
 
 class SearchTabViewController: BaseViewController {
-    private let viewModel: SearchTabViewModel
+    let viewModel: SearchTabViewModel
     private var bags: DisposeBag = .init()
     private var searchBar: UISearchController = {
         let sb = UISearchController()

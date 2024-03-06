@@ -21,12 +21,15 @@ final class SearchTabCoordinator {
         let useCase = StandardSearchTabUseCase(repository: repository)
         let viewModel = SearchTabViewModel(useCase: useCase, navigator: self)
         let viewController = SearchTabViewController(viewModel: viewModel)
+        viewController.hidesBottomBarWhenPushed = true
         navigationController.viewControllers = [viewController]
     }
 }
 
 extension SearchTabCoordinator: SearchTabNavigator {
-    func showRepositoryDetail(_ model: RepositoryEntity) {
-        
+    func pushToRepositoryDetail(_ model: RepositoryEntity) {
+        let viewModel = RepositoryDetailViewModel(repositoryEntity: model)
+        let vc = RepositoryDetailViewController(viewModel: viewModel)
+        navigationController.pushViewController(vc, animated: true)
     }
 }

@@ -29,6 +29,8 @@
 		B2AFC3222B889434003BE5D5 /* SearchTabCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2AFC3212B889434003BE5D5 /* SearchTabCoordinator.swift */; };
 		B2AFC3242B889443003BE5D5 /* SearchTabNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2AFC3232B889443003BE5D5 /* SearchTabNavigator.swift */; };
 		B2AFC3262B88964D003BE5D5 /* SearchTabUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2AFC3252B88964D003BE5D5 /* SearchTabUseCase.swift */; };
+		B2CA53752B984AB700D16E74 /* RepositoryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CA53742B984AB700D16E74 /* RepositoryDetailViewController.swift */; };
+		B2CA53772B984ACA00D16E74 /* RepositoryDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CA53762B984ACA00D16E74 /* RepositoryDetailViewModel.swift */; };
 		E5A6039FD407F7A53A369DAE /* libPods-GitWorldTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 25BA582A9A1EA9C451E97455 /* libPods-GitWorldTests.a */; };
 		E5FFDB23E5B722154F449DBD /* libPods-GitWorld.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A2D93FAD0234B92331517B5 /* libPods-GitWorld.a */; };
 /* End PBXBuildFile section */
@@ -84,6 +86,8 @@
 		B2AFC3212B889434003BE5D5 /* SearchTabCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTabCoordinator.swift; sourceTree = "<group>"; };
 		B2AFC3232B889443003BE5D5 /* SearchTabNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTabNavigator.swift; sourceTree = "<group>"; };
 		B2AFC3252B88964D003BE5D5 /* SearchTabUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTabUseCase.swift; sourceTree = "<group>"; };
+		B2CA53742B984AB700D16E74 /* RepositoryDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryDetailViewController.swift; sourceTree = "<group>"; };
+		B2CA53762B984ACA00D16E74 /* RepositoryDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryDetailViewModel.swift; sourceTree = "<group>"; };
 		C9E965CB4E175543C479B284 /* Pods-GitWorldTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitWorldTests.debug.xcconfig"; path = "Target Support Files/Pods-GitWorldTests/Pods-GitWorldTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -309,6 +313,7 @@
 			isa = PBXGroup;
 			children = (
 				B27CB3AC2B689D3E00742E3D /* SearchTabViewModel.swift */,
+				B2CA53762B984ACA00D16E74 /* RepositoryDetailViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -318,6 +323,7 @@
 			children = (
 				B27CB3AA2B689C8500742E3D /* SearchTabViewController.swift */,
 				B2895E412B8F309D00F41FFD /* SearchTabViewController+TableView.swift */,
+				B2CA53742B984AB700D16E74 /* RepositoryDetailViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -534,11 +540,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				B2AFC3172B888E12003BE5D5 /* AppConfiguration.swift in Sources */,
+				B2CA53752B984AB700D16E74 /* RepositoryDetailViewController.swift in Sources */,
 				B27CB3AD2B689D3E00742E3D /* SearchTabViewModel.swift in Sources */,
 				B2AFC31F2B8893EB003BE5D5 /* AppCoordinator.swift in Sources */,
 				B27CB3AF2B689DC300742E3D /* RepositoryEntity.swift in Sources */,
 				B21533982B4D1C2F00C99FC6 /* AppDelegate.swift in Sources */,
 				B2895E1F2B8EDBEC00F41FFD /* SearchTabRepository.swift in Sources */,
+				B2CA53772B984ACA00D16E74 /* RepositoryDetailViewModel.swift in Sources */,
 				B215339A2B4D1C2F00C99FC6 /* SceneDelegate.swift in Sources */,
 				B2AFC3192B88929D003BE5D5 /* AppDependencies.swift in Sources */,
 				B2AFC3222B889434003BE5D5 /* SearchTabCoordinator.swift in Sources */,
