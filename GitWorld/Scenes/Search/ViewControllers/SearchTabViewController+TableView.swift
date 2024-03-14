@@ -7,6 +7,8 @@
 
 import UIKit
 import Platform
+import RxCocoa
+import RxDataSources
 
 extension SearchTabViewController {
     func setupTableView() {
@@ -18,8 +20,8 @@ extension SearchTabViewController {
 
 extension SearchTabViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let entity = repositoryList[indexPath.row]
-        viewModel.pushToRepositoryDetail(entity)
+        let cellModel = repositoryList[indexPath.row]
+        viewModel.pushToRepositoryDetail(cellModel.entity)
     }
 }
 
@@ -30,9 +32,11 @@ extension SearchTabViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: RepositoryCell.reuseIdentifier, for: indexPath) as! RepositoryCell
-        cell.updateUI(repositoryList[indexPath.row])
+        let cellModel = repositoryList[indexPath.row]
+        cell.updateUI(cellModel.entity)
+        cell.clickCollectButtonCallback = { [weak self] in
+            self?.viewModel.collectRepository(cellModel.entity)
+        }
         return cell
     }
-    
-    
 }

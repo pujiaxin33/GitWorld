@@ -51,7 +51,27 @@ struct RepositoryOwner: Codable {
     let events_url: String?
 
     let site_admin: Bool?
-
+    
+    init(avatar_url: String?) {
+        self.login = nil
+        self.id = nil
+        self.node_id = nil
+        self.avatar_url = avatar_url
+        self.gravatar_id = nil
+        self.url = nil
+        self.received_events_url = nil
+        self.type = nil
+        self.html_url = nil
+        self.followers_url = nil
+        self.following_url = nil
+        self.gists_url = nil
+        self.starred_url = nil
+        self.subscriptions_url = nil
+        self.organizations_url = nil
+        self.repos_url = nil
+        self.events_url = nil
+        self.site_admin = nil
+    }
 }
 
 
@@ -80,8 +100,6 @@ struct RepositoryEntity: Codable {
     let full_name: String?
 
     let owner: RepositoryOwner?
-
-    let `private`: Bool?
 
     let html_url: String?
 
@@ -220,5 +238,81 @@ struct RepositoryEntity: Codable {
     let visibility: String?
 
     let license: RepositoryLicense?
-
+    
+    init(id: Int?, full_name: String?, owner: RepositoryOwner?, html_url: String?, description: String?, stargazers_count: Int?) {
+        self.id = id
+        self.node_id = nil
+        self.name = nil
+        self.full_name = full_name
+        self.owner = owner
+        self.html_url = html_url
+        self.description = description
+        self.fork = nil
+        self.url = nil
+        self.created_at = nil
+        self.updated_at = nil
+        self.pushed_at = nil
+        self.homepage = nil
+        self.size = nil
+        self.stargazers_count = stargazers_count
+        self.watchers_count = nil
+        self.language = nil
+        self.forks_count = nil
+        self.open_issues_count = nil
+        self.default_branch = nil
+        self.score = nil
+        self.archive_url = nil
+        self.assignees_url = nil
+        self.blobs_url = nil
+        self.branches_url = nil
+        self.collaborators_url = nil
+        self.comments_url = nil
+        self.commits_url = nil
+        self.compare_url = nil
+        self.contents_url = nil
+        self.contributors_url = nil
+        self.deployments_url = nil
+        self.downloads_url = nil
+        self.events_url = nil
+        self.forks_url = nil
+        self.git_commits_url = nil
+        self.git_refs_url = nil
+        self.git_tags_url = nil
+        self.git_url = nil
+        self.issue_comment_url = nil
+        self.issue_events_url = nil
+        self.issues_url = nil
+        self.keys_url = nil
+        self.labels_url = nil
+        self.languages_url = nil
+        self.merges_url = nil
+        self.milestones_url = nil
+        self.notifications_url = nil
+        self.pulls_url = nil
+        self.releases_url = nil
+        self.ssh_url = nil
+        self.stargazers_url = nil
+        self.statuses_url = nil
+        self.subscribers_url = nil
+        self.subscription_url = nil
+        self.tags_url = nil
+        self.teams_url = nil
+        self.trees_url = nil
+        self.clone_url = nil
+        self.mirror_url = nil
+        self.hooks_url = nil
+        self.svn_url = nil
+        self.forks = nil
+        self.open_issues = nil
+        self.watchers = nil
+        self.has_issues = nil
+        self.has_projects = nil
+        self.has_pages = nil
+        self.has_wiki = nil
+        self.has_downloads = nil
+        self.archived = nil
+        self.disabled = nil
+        self.visibility = nil
+        self.license = nil
+    }
 }

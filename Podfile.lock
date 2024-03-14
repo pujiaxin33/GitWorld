@@ -1,5 +1,6 @@
 PODS:
   - Alamofire (5.8.0)
+  - Differentiator (5.0.0)
   - ESPullToRefresh (2.9.3)
   - Kingfisher (7.9.1)
   - Moya (15.0.0):
@@ -20,10 +21,17 @@ PODS:
   - RxCocoa (6.6.0):
     - RxRelay (= 6.6.0)
     - RxSwift (= 6.6.0)
+  - RxDataSources (5.0.0):
+    - Differentiator (~> 5.0)
+    - RxCocoa (~> 6.0)
+    - RxSwift (~> 6.0)
   - RxRelay (6.6.0):
     - RxSwift (= 6.6.0)
   - RxSwift (6.6.0)
   - SnapKit (5.6.0)
+  - SQLite.swift (0.14.1):
+    - SQLite.swift/standard (= 0.14.1)
+  - SQLite.swift/standard (0.14.1)
 
 DEPENDENCIES:
   - ESPullToRefresh (= 2.9.3)
@@ -34,20 +42,25 @@ DEPENDENCIES:
   - Platform (from `./LocalPods/Platform`)
   - ProgressHUD (= 14.1.0)
   - RxCocoa (= 6.6.0)
+  - RxDataSources (~> 5.0)
   - RxSwift (= 6.6.0)
   - SnapKit (~> 5.0)
+  - SQLite.swift (~> 0.14.1)
 
 SPEC REPOS:
   trunk:
     - Alamofire
+    - Differentiator
     - ESPullToRefresh
     - Kingfisher
     - Moya
     - ProgressHUD
     - RxCocoa
+    - RxDataSources
     - RxRelay
     - RxSwift
     - SnapKit
+    - SQLite.swift
 
 EXTERNAL SOURCES:
   Networking:
@@ -57,6 +70,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   Alamofire: 0e92e751b3e9e66d7982db43919d01f313b8eb91
+  Differentiator: e8497ceab83c1b10ca233716d547b9af21b9344d
   ESPullToRefresh: 0d68daa602b343c81753a1b95e09fd0bfcddfd40
   Kingfisher: 1d14e9f59cbe19389f591c929000332bf70efd32
   Moya: 138f0573e53411fb3dc17016add0b748dfbd78ee
@@ -64,10 +78,12 @@ SPEC CHECKSUMS:
   Platform: 262929154fd300a31cf42d00851d7501cdc439b6
   ProgressHUD: c4a55f108815c46a6bf082407d2f806840b7a869
   RxCocoa: 44a80de90e25b739b5aeaae3c8c371a32e3343cc
+  RxDataSources: aa47cc1ed6c500fa0dfecac5c979b723542d79cf
   RxRelay: 45eaa5db8ee4fb50e5ebd57deec0159e97fa51e6
   RxSwift: a4b44f7d24599f674deebd1818eab82e58410632
   SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
+  SQLite.swift: 2992550ebf3c5b268bf4352603e3df87d2a4ed72
 
-PODFILE CHECKSUM: f685fb0a6ea1bffd930c7891d87212adcdfe06b7
+PODFILE CHECKSUM: 92e6341db3d15524357832a9f9119b3f894a739a
 
 COCOAPODS: 1.15.2

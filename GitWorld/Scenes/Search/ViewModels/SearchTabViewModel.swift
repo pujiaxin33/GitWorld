@@ -19,8 +19,9 @@ class SearchTabViewModel: ViewModelType {
     }
     
     struct Output {
-        let searchResultRepositories: Driver<Result<[RepositoryEntity], HttpError>>
-        let loadMoreRepositories: Driver<Result<[RepositoryEntity], HttpError>>
+        let searchResultRepositories: Driver<Result<[RepositoryCellModel], HttpError>>
+        let loadMoreRepositories: Driver<Result<[RepositoryCellModel], HttpError>>
+//        let updatedRepositories: Driver<Result<[RepositoryCellModel], HttpError>>
     }
     
     private let useCase: SearchTabUseCase
@@ -39,7 +40,7 @@ class SearchTabViewModel: ViewModelType {
             return self.useCase
                 .requestRepositoriesList(keyWord: keyword, pageIndex: 1)
                 .mapToResult { result in
-                    return Result<[RepositoryEntity], HttpError>.success(result)
+                    return Result<[RepositoryCellModel], HttpError>.success(result.map { RepositoryCellModel(entity: $0) })
                 }
                 .asDriver(onErrorJustReturn: .failure(HttpError.serverError))
         }
@@ -49,7 +50,7 @@ class SearchTabViewModel: ViewModelType {
             return self.useCase
                 .requestRepositoriesList(keyWord: self.currentKeyword ?? "", pageIndex: self.currentPageIndex)
                 .mapToResult { result in
-                    return Result<[RepositoryEntity], HttpError>.success(result)
+                    return Result<[RepositoryCellModel], HttpError>.success(result.map { RepositoryCellModel(entity: $0) })
                 }.asDriver(onErrorJustReturn: .failure(HttpError.serverError))
         }
         
@@ -58,5 +59,9 @@ class SearchTabViewModel: ViewModelType {
     
     func pushToRepositoryDetail(_ model: RepositoryEntity) {
         navigator.pushToRepositoryDetail(model)
+    }
+    
+    func collectRepository(_ entity: RepositoryEntity) {
+        useCase.collectRepository(entity)
     }
 }

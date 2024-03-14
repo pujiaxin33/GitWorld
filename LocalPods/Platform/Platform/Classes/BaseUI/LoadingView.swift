@@ -20,4 +20,8 @@ public class LoadingView {
     public static func succeed(_ text: String? = nil, interaction: Bool = true, delay: TimeInterval? = nil) {
         ProgressHUD.succeed(text, interaction: interaction, delay: delay)
     }
+    
+    public static func failed(_ text: String? = nil, interaction: Bool = true, delay: TimeInterval? = nil) {
+        ProgressHUD.failed(text, interaction: interaction, delay: delay)
+    }
 }

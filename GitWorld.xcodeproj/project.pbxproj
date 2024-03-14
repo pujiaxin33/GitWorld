@@ -29,9 +29,12 @@
 		B2AFC3222B889434003BE5D5 /* SearchTabCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2AFC3212B889434003BE5D5 /* SearchTabCoordinator.swift */; };
 		B2AFC3242B889443003BE5D5 /* SearchTabNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2AFC3232B889443003BE5D5 /* SearchTabNavigator.swift */; };
 		B2AFC3262B88964D003BE5D5 /* SearchTabUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2AFC3252B88964D003BE5D5 /* SearchTabUseCase.swift */; };
+		B2C207872B99B2B900A4907D /* SearchRepositoryListSecionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C207862B99B2B900A4907D /* SearchRepositoryListSecionModel.swift */; };
 		B2CA53752B984AB700D16E74 /* RepositoryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CA53742B984AB700D16E74 /* RepositoryDetailViewController.swift */; };
 		B2CA53772B984ACA00D16E74 /* RepositoryDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CA53762B984ACA00D16E74 /* RepositoryDetailViewModel.swift */; };
 		B2CA53792B984E5800D16E74 /* LoadingProgressLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CA53782B984E5800D16E74 /* LoadingProgressLine.swift */; };
+		B2CA537B2B98622600D16E74 /* RepositoryCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CA537A2B98622600D16E74 /* RepositoryCellModel.swift */; };
+		B2CA537E2B98656A00D16E74 /* RepositoryDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CA537D2B98656A00D16E74 /* RepositoryDatabase.swift */; };
 		E5A6039FD407F7A53A369DAE /* libPods-GitWorldTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 25BA582A9A1EA9C451E97455 /* libPods-GitWorldTests.a */; };
 		E5FFDB23E5B722154F449DBD /* libPods-GitWorld.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A2D93FAD0234B92331517B5 /* libPods-GitWorld.a */; };
 /* End PBXBuildFile section */
@@ -87,9 +90,12 @@
 		B2AFC3212B889434003BE5D5 /* SearchTabCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTabCoordinator.swift; sourceTree = "<group>"; };
 		B2AFC3232B889443003BE5D5 /* SearchTabNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTabNavigator.swift; sourceTree = "<group>"; };
 		B2AFC3252B88964D003BE5D5 /* SearchTabUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTabUseCase.swift; sourceTree = "<group>"; };
+		B2C207862B99B2B900A4907D /* SearchRepositoryListSecionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRepositoryListSecionModel.swift; sourceTree = "<group>"; };
 		B2CA53742B984AB700D16E74 /* RepositoryDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryDetailViewController.swift; sourceTree = "<group>"; };
 		B2CA53762B984ACA00D16E74 /* RepositoryDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryDetailViewModel.swift; sourceTree = "<group>"; };
 		B2CA53782B984E5800D16E74 /* LoadingProgressLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingProgressLine.swift; sourceTree = "<group>"; };
+		B2CA537A2B98622600D16E74 /* RepositoryCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryCellModel.swift; sourceTree = "<group>"; };
+		B2CA537D2B98656A00D16E74 /* RepositoryDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryDatabase.swift; sourceTree = "<group>"; };
 		C9E965CB4E175543C479B284 /* Pods-GitWorldTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitWorldTests.debug.xcconfig"; path = "Target Support Files/Pods-GitWorldTests/Pods-GitWorldTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -240,6 +246,7 @@
 		B258EDA12B4D2B6D00A8F5AD /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				B2CA537C2B9863F500D16E74 /* Database */,
 				B258EDA52B4D2BB900A8F5AD /* Repositories */,
 			);
 			path = Data;
@@ -308,6 +315,8 @@
 		B27CB3A12B68987300742E3D /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				B2CA537A2B98622600D16E74 /* RepositoryCellModel.swift */,
+				B2C207862B99B2B900A4907D /* SearchRepositoryListSecionModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -338,6 +347,14 @@
 				B2AFC3232B889443003BE5D5 /* SearchTabNavigator.swift */,
 			);
 			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		B2CA537C2B9863F500D16E74 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				B2CA537D2B98656A00D16E74 /* RepositoryDatabase.swift */,
+			);
+			path = Database;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -581,8 +598,10 @@
 				B2AFC3172B888E12003BE5D5 /* AppConfiguration.swift in Sources */,
 				B2CA53752B984AB700D16E74 /* RepositoryDetailViewController.swift in Sources */,
 				B27CB3AD2B689D3E00742E3D /* SearchTabViewModel.swift in Sources */,
+				B2CA537E2B98656A00D16E74 /* RepositoryDatabase.swift in Sources */,
 				B2CA53792B984E5800D16E74 /* LoadingProgressLine.swift in Sources */,
 				B2AFC31F2B8893EB003BE5D5 /* AppCoordinator.swift in Sources */,
+				B2C207872B99B2B900A4907D /* SearchRepositoryListSecionModel.swift in Sources */,
 				B27CB3AF2B689DC300742E3D /* RepositoryEntity.swift in Sources */,
 				B21533982B4D1C2F00C99FC6 /* AppDelegate.swift in Sources */,
 				B2895E1F2B8EDBEC00F41FFD /* SearchTabRepository.swift in Sources */,
@@ -593,6 +612,7 @@
 				B2AFC3122B888C21003BE5D5 /* AppAppearance.swift in Sources */,
 				B27CB3AB2B689C8500742E3D /* SearchTabViewController.swift in Sources */,
 				B2AFC3242B889443003BE5D5 /* SearchTabNavigator.swift in Sources */,
+				B2CA537B2B98622600D16E74 /* RepositoryCellModel.swift in Sources */,
 				B2895E212B8EDC2F00F41FFD /* StandardSearchTabRepository.swift in Sources */,
 				B2895E422B8F309D00F41FFD /* SearchTabViewController+TableView.swift in Sources */,
 				B2AFC3262B88964D003BE5D5 /* SearchTabUseCase.swift in Sources */,

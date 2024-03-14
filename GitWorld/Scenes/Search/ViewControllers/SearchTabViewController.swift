@@ -10,6 +10,7 @@ import Platform
 import RxSwift
 import SnapKit
 import ESPullToRefresh
+import RxDataSources
 
 class SearchTabViewController: BaseViewController {
     let viewModel: SearchTabViewModel
@@ -26,7 +27,7 @@ class SearchTabViewController: BaseViewController {
     }()
     private var searchResultSubject: PublishSubject<String> = .init()
     private var loadMoreSubject: PublishSubject<Void> = .init()
-    var repositoryList: [RepositoryEntity] = []
+    var repositoryList: [RepositoryCellModel] = []
     
     init(viewModel: SearchTabViewModel) {
         self.viewModel = viewModel
@@ -98,6 +99,21 @@ class SearchTabViewController: BaseViewController {
                 LoadingView.hide()
             }
         }.disposed(by: bags)
+        
+//        let dataSource = RxTableViewSectionedReloadDataSource<SearchRepositoryListSecionModel>(
+//          configureCell: {[weak self] dataSource, tableView, indexPath, item in
+//              let cell = tableView.dequeueReusableCell(withIdentifier: RepositoryCell.reuseIdentifier, for: indexPath) as! RepositoryCell
+//              cell.updateUI(item.entity)
+//              cell.clickCollectButtonCallback = { [weak self] in
+//                  self?.viewModel.collectRepository(item.entity)
+//              }
+//            return cell
+//        })
+//        output.updatedRepositories
+//            .asObservable()
+//            .bind(to: tableView.rx.items(dataSource: dataSource))
+//            .disposed(by: bags)
+        
     }
 }
 

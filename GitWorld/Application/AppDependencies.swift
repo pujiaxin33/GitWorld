@@ -10,13 +10,17 @@ import Networking
 
 protocol AppDependencies {
     var apiClient: ApiClient { get }
+    var repositoryDatabase: RepositoryDatabase { get }
 }
 
 class StandardAppDependencies: AppDependencies {
     let configuration = AppConfiguration()
     let apiClient: ApiClient
+    let repositoryDatabase: RepositoryDatabase
     
     init() {
         apiClient = StandardApiClient(baseUrl: configuration.baseUrl)
+        repositoryDatabase = StandardRepositoryDatabase()
+        try? repositoryDatabase.createTable()
     }
 }

@@ -10,6 +10,8 @@ import Kingfisher
 import SnapKit
 
 class RepositoryCell: UITableViewCell {
+    var clickCollectButtonCallback: (() -> Void)?
+    
     private lazy var iconImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFit
@@ -33,7 +35,16 @@ class RepositoryCell: UITableViewCell {
         label.textColor = .black
         return label
     }()
-
+    private lazy var collectButton: UIButton = {
+        let button = UIButton()
+        button.contentMode = .scaleAspectFit
+        button.setImage(UIImage(systemName: "heart"), for: .normal)
+        button.setImage(UIImage(systemName: "heart.fill"), for: .selected)
+        button.tintColor = .brown
+        button.addTarget(self, action: #selector(onClickCollectButton), for: .touchUpInside)
+        return button
+    }()
+    
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
@@ -56,6 +67,7 @@ class RepositoryCell: UITableViewCell {
         contentView.addSubview(nameLabel)
         contentView.addSubview(descLabel)
         contentView.addSubview(starsLabel)
+        contentView.addSubview(collectButton)
         
         iconImageView.snp.makeConstraints { make in
             make.top.leading.bottom.equalToSuperview().inset(16)
@@ -64,17 +76,26 @@ class RepositoryCell: UITableViewCell {
         nameLabel.snp.makeConstraints { make in
             make.leading.equalTo(iconImageView.snp.trailing).offset(3)
             make.top.equalTo(iconImageView.snp.top)
-            make.trailing.equalToSuperview().offset(-16)
+            make.trailing.equalTo(collectButton.snp.leading).offset(-5)
         }
         descLabel.snp.makeConstraints { make in
             make.leading.equalTo(iconImageView.snp.trailing).offset(3)
             make.top.equalTo(nameLabel.snp.bottom).offset(5)
-            make.trailing.equalToSuperview().offset(-16)
+            make.trailing.equalTo(collectButton.snp.leading).offset(-5)
         }
         starsLabel.snp.makeConstraints { make in
             make.leading.equalTo(iconImageView.snp.trailing).offset(3)
             make.top.equalTo(descLabel.snp.bottom).offset(5)
-            make.trailing.equalToSuperview().offset(-16)
+            make.trailing.equalTo(collectButton.snp.leading).offset(-5)
         }
+        collectButton.snp.makeConstraints { make in
+            make.trailing.equalToSuperview().offset(-10)
+            make.centerY.equalToSuperview()
+            make.width.height.equalTo(25)
+        }
+    }
+    
+    @objc private func onClickCollectButton() {
+        clickCollectButtonCallback?()
     }
 }

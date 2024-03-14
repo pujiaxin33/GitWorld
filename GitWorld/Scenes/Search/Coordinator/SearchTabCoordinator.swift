@@ -18,7 +18,7 @@ final class SearchTabCoordinator {
     
     func start() {
         let repository = StandardSearchTabRepository(apiClient: dependencies.apiClient)
-        let useCase = StandardSearchTabUseCase(repository: repository)
+        let useCase = StandardSearchTabUseCase(repository: repository, database: dependencies.repositoryDatabase)
         let viewModel = SearchTabViewModel(useCase: useCase, navigator: self)
         let viewController = SearchTabViewController(viewModel: viewModel)
         navigationController.viewControllers = [viewController]
