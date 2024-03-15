@@ -1,0 +1,11 @@
+//
+//  DebugConfig.xcconfig
+//  GitWorld
+//
+//  Created by Jiaxin Pu on 2024/3/15.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+#include "Pods/Target Support Files/Pods-GitWorld/Pods-GitWorld.debug.xcconfig"
+APP_NAME = GitWorlDebug
