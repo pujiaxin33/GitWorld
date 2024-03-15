@@ -19,15 +19,15 @@ class SearchTabViewModel: ViewModelType {
     }
     
     struct Output {
-        let searchResultRepositories: Driver<Result<[RepositoryCellModel], HttpError>>
-        let loadMoreRepositories: Driver<Result<[RepositoryCellModel], HttpError>>
-//        let updatedRepositories: Driver<Result<[RepositoryCellModel], HttpError>>
+        let cellModels: Driver<Result<[RepositoryCellModel], HttpError>>
     }
     
+    private(set) var cellModels: [RepositoryCellModel] = []
     private let useCase: SearchTabUseCase
     private let navigator: SearchTabNavigator
     private var currentPageIndex: Int = 1
     private var currentKeyword: String?
+    private let updateCellModelsSubject: PublishSubject<Result<[RepositoryCellModel], HttpError>> = .init()
     
     init(useCase: SearchTabUseCase, navigator: SearchTabNavigator) {
         self.useCase = useCase
@@ -54,7 +54,16 @@ class SearchTabViewModel: ViewModelType {
                 }.asDriver(onErrorJustReturn: .failure(HttpError.serverError))
         }
         
-        return Output(searchResultRepositories: searchResultRepositories, loadMoreRepositories: loadMoreRepositories)
+        let updateCellModelsDriver = updateCellModelsSubject.asDriver(onErrorJustReturn: .success([]))
+        
+        var cellModels = Driver.merge([searchResultRepositories, loadMoreRepositories, updateCellModelsDriver])
+        cellModels = cellModels.do {[weak self] result in
+            if case let .success(data) = result {
+                self?.cellModels = data
+            }
+        }
+        
+        return Output(cellModels: cellModels)
     }
     
     func pushToRepositoryDetail(_ model: RepositoryEntity) {
@@ -63,5 +72,7 @@ class SearchTabViewModel: ViewModelType {
     
     func collectRepository(_ entity: RepositoryEntity) {
         useCase.collectRepository(entity)
+        cellModels.first { $0.entity.id == entity.id }?.isCollected = true
+        updateCellModelsSubject.onNext(.success(cellModels))
     }
 }

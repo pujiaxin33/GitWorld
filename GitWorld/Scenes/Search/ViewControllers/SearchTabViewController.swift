@@ -27,7 +27,6 @@ class SearchTabViewController: BaseViewController {
     }()
     private var searchResultSubject: PublishSubject<String> = .init()
     private var loadMoreSubject: PublishSubject<Void> = .init()
-    var repositoryList: [RepositoryCellModel] = []
     
     init(viewModel: SearchTabViewModel) {
         self.viewModel = viewModel
@@ -75,28 +74,13 @@ class SearchTabViewController: BaseViewController {
         let input = SearchTabViewModel.Input(searchRepository: searchRepositoryDriver, loadMoreRepository: loadMoreRepository)
         
         let output = viewModel.transform(input)
-        output.searchResultRepositories.drive { [weak self] result in
+        output.cellModels.drive { [weak self] result in
+            LoadingView.hide()
             switch result {
-            case .success(let items):
-                LoadingView.succeed("请求成功了")
-                self?.repositoryList = items
+            case .success:
                 self?.tableView.reloadData()
             case .failure(let error):
                 print(error.localizedDescription)
-                LoadingView.hide()
-            }
-        }.disposed(by: bags)
-        
-        output.loadMoreRepositories.drive { [weak self] result in
-            self?.tableView.es.stopLoadingMore()
-            switch result {
-            case .success(let items):
-                LoadingView.succeed("加载更多成功了")
-                self?.repositoryList.append(contentsOf: items)
-                self?.tableView.reloadData()
-            case .failure(let error):
-                print(error.localizedDescription)
-                LoadingView.hide()
             }
         }.disposed(by: bags)
         

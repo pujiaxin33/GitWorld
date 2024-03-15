@@ -55,11 +55,13 @@ class RepositoryCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func updateUI(_ entity: RepositoryEntity) {
+    func updateUI(_ cellModel: RepositoryCellModel) {
+        let entity = cellModel.entity
         self.iconImageView.kf.setImage(with: URL(string: entity.owner?.avatar_url ?? ""))
         self.nameLabel.text = entity.full_name
         self.descLabel.text = entity.description
         self.starsLabel.text = "stars:\(entity.stargazers_count ?? 0)"
+        collectButton.isSelected = cellModel.isCollected
     }
     
     private func setupViews() {
