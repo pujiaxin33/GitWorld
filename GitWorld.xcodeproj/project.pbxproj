@@ -28,6 +28,9 @@
 		B2A0DCC12BA9874800C6EFB8 /* CollectTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A0DCC02BA9874800C6EFB8 /* CollectTabViewController.swift */; };
 		B2A0DCC32BA987B000C6EFB8 /* CollectTabUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A0DCC22BA987B000C6EFB8 /* CollectTabUseCase.swift */; };
 		B2A0DCC52BA98C2F00C6EFB8 /* CollectTabViewController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A0DCC42BA98C2F00C6EFB8 /* CollectTabViewController+TableView.swift */; };
+		B2A0DCC72BA9933900C6EFB8 /* SearchTabViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A0DCC62BA9933900C6EFB8 /* SearchTabViewModelTests.swift */; };
+		B2A0DCC92BA9946F00C6EFB8 /* MockSearchTabUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A0DCC82BA9946F00C6EFB8 /* MockSearchTabUseCase.swift */; };
+		B2A0DCCB2BA994CB00C6EFB8 /* MockSearchTabNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A0DCCA2BA994CB00C6EFB8 /* MockSearchTabNavigator.swift */; };
 		B2AFC3122B888C21003BE5D5 /* AppAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2AFC3112B888C21003BE5D5 /* AppAppearance.swift */; };
 		B2AFC3172B888E12003BE5D5 /* AppConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2AFC3162B888E12003BE5D5 /* AppConfiguration.swift */; };
 		B2AFC3192B88929D003BE5D5 /* AppDependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2AFC3182B88929D003BE5D5 /* AppDependencies.swift */; };
@@ -95,6 +98,9 @@
 		B2A0DCC02BA9874800C6EFB8 /* CollectTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectTabViewController.swift; sourceTree = "<group>"; };
 		B2A0DCC22BA987B000C6EFB8 /* CollectTabUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectTabUseCase.swift; sourceTree = "<group>"; };
 		B2A0DCC42BA98C2F00C6EFB8 /* CollectTabViewController+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CollectTabViewController+TableView.swift"; sourceTree = "<group>"; };
+		B2A0DCC62BA9933900C6EFB8 /* SearchTabViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTabViewModelTests.swift; sourceTree = "<group>"; };
+		B2A0DCC82BA9946F00C6EFB8 /* MockSearchTabUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSearchTabUseCase.swift; sourceTree = "<group>"; };
+		B2A0DCCA2BA994CB00C6EFB8 /* MockSearchTabNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSearchTabNavigator.swift; sourceTree = "<group>"; };
 		B2AFC3112B888C21003BE5D5 /* AppAppearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAppearance.swift; sourceTree = "<group>"; };
 		B2AFC3162B888E12003BE5D5 /* AppConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfiguration.swift; sourceTree = "<group>"; };
 		B2AFC3182B88929D003BE5D5 /* AppDependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDependencies.swift; sourceTree = "<group>"; };
@@ -204,6 +210,9 @@
 			isa = PBXGroup;
 			children = (
 				B21533AE2B4D1C3200C99FC6 /* GitWorldTests.swift */,
+				B2A0DCC82BA9946F00C6EFB8 /* MockSearchTabUseCase.swift */,
+				B2A0DCCA2BA994CB00C6EFB8 /* MockSearchTabNavigator.swift */,
+				B2A0DCC62BA9933900C6EFB8 /* SearchTabViewModelTests.swift */,
 			);
 			path = GitWorldTests;
 			sourceTree = "<group>";
@@ -692,6 +701,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B2A0DCC92BA9946F00C6EFB8 /* MockSearchTabUseCase.swift in Sources */,
+				B2A0DCCB2BA994CB00C6EFB8 /* MockSearchTabNavigator.swift in Sources */,
+				B2A0DCC72BA9933900C6EFB8 /* SearchTabViewModelTests.swift in Sources */,
 				B21533AF2B4D1C3200C99FC6 /* GitWorldTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
