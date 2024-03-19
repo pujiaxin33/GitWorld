@@ -22,6 +22,12 @@
 		B2895E212B8EDC2F00F41FFD /* StandardSearchTabRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2895E202B8EDC2F00F41FFD /* StandardSearchTabRepository.swift */; };
 		B2895E422B8F309D00F41FFD /* SearchTabViewController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2895E412B8F309D00F41FFD /* SearchTabViewController+TableView.swift */; };
 		B2895E452B8F31A200F41FFD /* RepositoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2895E442B8F31A200F41FFD /* RepositoryCell.swift */; };
+		B2A0DCBB2BA986A800C6EFB8 /* CollectCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A0DCBA2BA986A800C6EFB8 /* CollectCoordinator.swift */; };
+		B2A0DCBD2BA986BE00C6EFB8 /* CollectTabNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A0DCBC2BA986BE00C6EFB8 /* CollectTabNavigator.swift */; };
+		B2A0DCBF2BA9871400C6EFB8 /* CollectTabViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A0DCBE2BA9871400C6EFB8 /* CollectTabViewModel.swift */; };
+		B2A0DCC12BA9874800C6EFB8 /* CollectTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A0DCC02BA9874800C6EFB8 /* CollectTabViewController.swift */; };
+		B2A0DCC32BA987B000C6EFB8 /* CollectTabUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A0DCC22BA987B000C6EFB8 /* CollectTabUseCase.swift */; };
+		B2A0DCC52BA98C2F00C6EFB8 /* CollectTabViewController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A0DCC42BA98C2F00C6EFB8 /* CollectTabViewController+TableView.swift */; };
 		B2AFC3122B888C21003BE5D5 /* AppAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2AFC3112B888C21003BE5D5 /* AppAppearance.swift */; };
 		B2AFC3172B888E12003BE5D5 /* AppConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2AFC3162B888E12003BE5D5 /* AppConfiguration.swift */; };
 		B2AFC3192B88929D003BE5D5 /* AppDependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2AFC3182B88929D003BE5D5 /* AppDependencies.swift */; };
@@ -83,6 +89,12 @@
 		B2895E202B8EDC2F00F41FFD /* StandardSearchTabRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardSearchTabRepository.swift; sourceTree = "<group>"; };
 		B2895E412B8F309D00F41FFD /* SearchTabViewController+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SearchTabViewController+TableView.swift"; sourceTree = "<group>"; };
 		B2895E442B8F31A200F41FFD /* RepositoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryCell.swift; sourceTree = "<group>"; };
+		B2A0DCBA2BA986A800C6EFB8 /* CollectCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectCoordinator.swift; sourceTree = "<group>"; };
+		B2A0DCBC2BA986BE00C6EFB8 /* CollectTabNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectTabNavigator.swift; sourceTree = "<group>"; };
+		B2A0DCBE2BA9871400C6EFB8 /* CollectTabViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectTabViewModel.swift; sourceTree = "<group>"; };
+		B2A0DCC02BA9874800C6EFB8 /* CollectTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectTabViewController.swift; sourceTree = "<group>"; };
+		B2A0DCC22BA987B000C6EFB8 /* CollectTabUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectTabUseCase.swift; sourceTree = "<group>"; };
+		B2A0DCC42BA98C2F00C6EFB8 /* CollectTabViewController+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CollectTabViewController+TableView.swift"; sourceTree = "<group>"; };
 		B2AFC3112B888C21003BE5D5 /* AppAppearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAppearance.swift; sourceTree = "<group>"; };
 		B2AFC3162B888E12003BE5D5 /* AppConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfiguration.swift; sourceTree = "<group>"; };
 		B2AFC3182B88929D003BE5D5 /* AppDependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDependencies.swift; sourceTree = "<group>"; };
@@ -231,6 +243,7 @@
 		B258ED9F2B4D2B5800A8F5AD /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				B2A0DCB52BA985F600C6EFB8 /* Collect */,
 				B27CB39F2B68985F00742E3D /* Search */,
 				B27CB39E2B6896E000742E3D /* Mine */,
 			);
@@ -276,6 +289,7 @@
 			isa = PBXGroup;
 			children = (
 				B2AFC3252B88964D003BE5D5 /* SearchTabUseCase.swift */,
+				B2A0DCC22BA987B000C6EFB8 /* CollectTabUseCase.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -340,6 +354,50 @@
 				B27CB3AA2B689C8500742E3D /* SearchTabViewController.swift */,
 				B2895E412B8F309D00F41FFD /* SearchTabViewController+TableView.swift */,
 				B2CA53742B984AB700D16E74 /* RepositoryDetailViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		B2A0DCB52BA985F600C6EFB8 /* Collect */ = {
+			isa = PBXGroup;
+			children = (
+				B2A0DCB62BA9860200C6EFB8 /* Coordinator */,
+				B2A0DCB72BA9865900C6EFB8 /* ViewModels */,
+				B2A0DCB82BA9866100C6EFB8 /* Models */,
+				B2A0DCB92BA9867200C6EFB8 /* ViewControllers */,
+			);
+			path = Collect;
+			sourceTree = "<group>";
+		};
+		B2A0DCB62BA9860200C6EFB8 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				B2A0DCBA2BA986A800C6EFB8 /* CollectCoordinator.swift */,
+				B2A0DCBC2BA986BE00C6EFB8 /* CollectTabNavigator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		B2A0DCB72BA9865900C6EFB8 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				B2A0DCBE2BA9871400C6EFB8 /* CollectTabViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		B2A0DCB82BA9866100C6EFB8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		B2A0DCB92BA9867200C6EFB8 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				B2A0DCC02BA9874800C6EFB8 /* CollectTabViewController.swift */,
+				B2A0DCC42BA98C2F00C6EFB8 /* CollectTabViewController+TableView.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -604,9 +662,11 @@
 				B27CB3AD2B689D3E00742E3D /* SearchTabViewModel.swift in Sources */,
 				B2CA537E2B98656A00D16E74 /* RepositoryDatabase.swift in Sources */,
 				B2CA53792B984E5800D16E74 /* LoadingProgressLine.swift in Sources */,
+				B2A0DCC32BA987B000C6EFB8 /* CollectTabUseCase.swift in Sources */,
 				B2AFC31F2B8893EB003BE5D5 /* AppCoordinator.swift in Sources */,
 				B2C207872B99B2B900A4907D /* SearchRepositoryListSecionModel.swift in Sources */,
 				B27CB3AF2B689DC300742E3D /* RepositoryEntity.swift in Sources */,
+				B2A0DCC52BA98C2F00C6EFB8 /* CollectTabViewController+TableView.swift in Sources */,
 				B21533982B4D1C2F00C99FC6 /* AppDelegate.swift in Sources */,
 				B2895E1F2B8EDBEC00F41FFD /* SearchTabRepository.swift in Sources */,
 				B2CA53772B984ACA00D16E74 /* RepositoryDetailViewModel.swift in Sources */,
@@ -617,10 +677,14 @@
 				B27CB3AB2B689C8500742E3D /* SearchTabViewController.swift in Sources */,
 				B2AFC3242B889443003BE5D5 /* SearchTabNavigator.swift in Sources */,
 				B2CA537B2B98622600D16E74 /* RepositoryCellModel.swift in Sources */,
+				B2A0DCBD2BA986BE00C6EFB8 /* CollectTabNavigator.swift in Sources */,
+				B2A0DCC12BA9874800C6EFB8 /* CollectTabViewController.swift in Sources */,
 				B2895E212B8EDC2F00F41FFD /* StandardSearchTabRepository.swift in Sources */,
+				B2A0DCBB2BA986A800C6EFB8 /* CollectCoordinator.swift in Sources */,
 				B2895E422B8F309D00F41FFD /* SearchTabViewController+TableView.swift in Sources */,
 				B2AFC3262B88964D003BE5D5 /* SearchTabUseCase.swift in Sources */,
 				B2895E452B8F31A200F41FFD /* RepositoryCell.swift in Sources */,
+				B2A0DCBF2BA9871400C6EFB8 /* CollectTabViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

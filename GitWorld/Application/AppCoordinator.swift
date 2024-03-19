@@ -23,22 +23,21 @@ final class AppCoordinator {
         let searchCoordinator = SearchTabCoordinator(dependencies: dependencies, navigationController: searchNavigationController)
         searchCoordinator.start()
         
-        let activityNavigationController = UINavigationController()
-        activityNavigationController.tabBarItem = .init(title: "活动", image: .init(systemName: "bell"), selectedImage: nil)
-        let activityVC = BaseViewController()
-        activityVC.title = "活动"
-        activityNavigationController.viewControllers = [activityVC]
+        let collectNavigationController = UINavigationController()
+        collectNavigationController.tabBarItem = .init(title: "收藏", image: .init(systemName: "shippingbox"), selectedImage: nil)
+        let collectCoordinator = CollectCoordinator(dependencies: dependencies, navigationController: collectNavigationController)
+        collectCoordinator.start()
         
         let settingsNavigationController = UINavigationController()
         settingsNavigationController.tabBarItem = .init(title: "设置", image: .init(systemName: "gearshape"), selectedImage: nil)
         let settingsVC = BaseViewController()
-        settingsVC.title = "活动"
+        settingsVC.title = "设置"
         settingsNavigationController.viewControllers = [settingsVC]
         
         let tabBarController = BaseTabBarController()
         tabBarController.viewControllers = [
             searchNavigationController,
-            activityNavigationController,
+            collectNavigationController,
             settingsNavigationController
         ]
         

@@ -10,7 +10,7 @@ import Kingfisher
 import SnapKit
 
 class RepositoryCell: UITableViewCell {
-    var clickCollectButtonCallback: (() -> Void)?
+    var clickCollectButtonCallback: ((Bool) -> Void)?
     
     private lazy var iconImageView: UIImageView = {
         let imageView = UIImageView()
@@ -98,6 +98,6 @@ class RepositoryCell: UITableViewCell {
     }
     
     @objc private func onClickCollectButton() {
-        clickCollectButtonCallback?()
+        clickCollectButtonCallback?(collectButton.isSelected)
     }
 }

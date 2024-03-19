@@ -1,8 +1,8 @@
 //
-//  SearchTabViewController+TableView.swift
+//  CollectTabViewController+TableView.swift
 //  GitWorld
 //
-//  Created by Jiaxin Pu on 2024/2/28.
+//  Created by Jiaxin Pu on 2024/3/19.
 //
 
 import UIKit
@@ -10,7 +10,7 @@ import Platform
 import RxCocoa
 import RxDataSources
 
-extension SearchTabViewController {
+extension CollectTabViewController {
     private var repositoryList: [RepositoryCellModel] {
         self.viewModel.cellModels
     }
@@ -22,14 +22,14 @@ extension SearchTabViewController {
     }
 }
 
-extension SearchTabViewController: UITableViewDelegate {
+extension CollectTabViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let cellModel = repositoryList[indexPath.row]
         viewModel.pushToRepositoryDetail(cellModel.entity)
     }
 }
 
-extension SearchTabViewController: UITableViewDataSource {
+extension CollectTabViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return repositoryList.count
     }
@@ -48,3 +48,4 @@ extension SearchTabViewController: UITableViewDataSource {
         return cell
     }
 }
+

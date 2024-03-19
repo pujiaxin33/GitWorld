@@ -49,8 +49,10 @@ class SearchTabViewModel: ViewModelType {
             self.currentPageIndex += 1
             return self.useCase
                 .requestRepositoriesList(keyWord: self.currentKeyword ?? "", pageIndex: self.currentPageIndex)
-                .mapToResult { result in
-                    return Result<[RepositoryCellModel], HttpError>.success(result.map { RepositoryCellModel(entity: $0) })
+                .mapToResult {[weak self] result in
+                    let newCellModels = result.map { RepositoryCellModel(entity: $0) }
+                    self?.cellModels.append(contentsOf: newCellModels)
+                    return Result<[RepositoryCellModel], HttpError>.success(self?.cellModels ?? [])
                 }.asDriver(onErrorJustReturn: .failure(HttpError.serverError))
         }
         
@@ -60,6 +62,7 @@ class SearchTabViewModel: ViewModelType {
         cellModels = cellModels.do {[weak self] result in
             if case let .success(data) = result {
                 self?.cellModels = data
+                self?.updateCollectStatus()
             }
         }
         
@@ -74,5 +77,18 @@ class SearchTabViewModel: ViewModelType {
         useCase.collectRepository(entity)
         cellModels.first { $0.entity.id == entity.id }?.isCollected = true
         updateCellModelsSubject.onNext(.success(cellModels))
+    }
+    
+    func uncollectRepository(_ entity: RepositoryEntity) {
+        useCase.uncollectRepository(entity)
+        cellModels.first { $0.entity.id == entity.id }?.isCollected = false
+        updateCellModelsSubject.onNext(.success(cellModels))
+    }
+    
+    private func updateCollectStatus() {
+        let collectedList = useCase.getCollectedRepositoriesList()
+        for collectedRepository in collectedList {
+            cellModels.first { $0.entity.id == collectedRepository.id }?.isCollected = true
+        }
     }
 }

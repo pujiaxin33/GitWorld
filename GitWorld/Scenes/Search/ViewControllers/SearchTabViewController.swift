@@ -44,6 +44,12 @@ class SearchTabViewController: BaseViewController {
         setupBindings()
     }
     
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        
+        searchBar.isActive = false
+    }
+    
     private func setupViews() {
         self.title = "搜索"
         

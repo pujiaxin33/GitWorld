@@ -26,7 +26,15 @@ class StandardRepositoryDatabase: RepositoryDatabase {
     private let avatar_url = Expression<String?>("avatar_url")
     
     init() {
-        self.connection = try? Connection("./sqliteFiles/repositories.sqlite3")
+        do {
+            let path = NSSearchPathForDirectoriesInDomains(
+                .documentDirectory, .userDomainMask, true
+            ).first!
+            self.connection = try Connection("\(path)/db.sqlite3")
+        } catch (let error) {
+            self.connection = nil
+            print(error.localizedDescription)
+        }
     }
     
     func createTable() throws {
@@ -36,6 +44,7 @@ class StandardRepositoryDatabase: RepositoryDatabase {
             t.column(html_url, unique: true)
             t.column(description)
             t.column(stargazers_count)
+            t.column(avatar_url)
         })
     }
     
