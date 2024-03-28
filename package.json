@@ -1,8 +1,19 @@
 {
-  "scripts": {
-    "prepare": "husky"
+   "scripts": {
+       "prepare": "husky install",
+      "lint-staged": "lint-staged",
+   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   },
-  "dependencies": {
-    "lint-staged": "^15.2.2"
+  "lint-staged": {
+    "*.{png,jpeg,jpg,gif,svg}": "imagemin-linter -l"
+  },
+  "devDependencies": {
+    "husky": "^4.3.8",
+    "imagemin-linter": "^1.0.2",
+    "lint-staged": "^10.5.4"
   }
 }
