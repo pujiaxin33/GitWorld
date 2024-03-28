@@ -1,12 +1,7 @@
 {
-   "scripts": {
-       "prepare": "husky install",
-      "lint-staged": "lint-staged",
-   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
+  "scripts": {
+    "prepare": "husky install",
+    "lint-staged": "lint-staged"
   },
   "lint-staged": {
     "*.{png,jpeg,jpg,gif,svg}": "imagemin-linter -l"
