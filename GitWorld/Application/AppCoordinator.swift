@@ -30,9 +30,8 @@ final class AppCoordinator {
         
         let settingsNavigationController = UINavigationController()
         settingsNavigationController.tabBarItem = .init(title: "设置", image: .init(systemName: "gearshape"), selectedImage: nil)
-        let settingsVC = BaseViewController()
-        settingsVC.title = "设置"
-        settingsNavigationController.viewControllers = [settingsVC]
+        let settingsCoordinator = SettingsTabCoordinator(dependecies: dependencies, navigationController: settingsNavigationController)
+        settingsCoordinator.start()
         
         let tabBarController = BaseTabBarController()
         tabBarController.viewControllers = [

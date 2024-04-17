@@ -44,6 +44,14 @@
 		B2CA53792B984E5800D16E74 /* LoadingProgressLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CA53782B984E5800D16E74 /* LoadingProgressLine.swift */; };
 		B2CA537B2B98622600D16E74 /* RepositoryCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CA537A2B98622600D16E74 /* RepositoryCellModel.swift */; };
 		B2CA537E2B98656A00D16E74 /* RepositoryDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CA537D2B98656A00D16E74 /* RepositoryDatabase.swift */; };
+		B2F6DDC02BCFBC8D00362F9E /* SettingsTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F6DDBF2BCFBC8D00362F9E /* SettingsTabViewController.swift */; };
+		B2F6DDC22BCFBCB100362F9E /* SettingsTabCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F6DDC12BCFBCB100362F9E /* SettingsTabCoordinator.swift */; };
+		B2F6DDC42BCFBCC300362F9E /* SettingsTabNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F6DDC32BCFBCC300362F9E /* SettingsTabNavigator.swift */; };
+		B2F6DDC62BCFBCD500362F9E /* SettingsTabViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F6DDC52BCFBCD500362F9E /* SettingsTabViewModel.swift */; };
+		B2F6DDCA2BCFBDFF00362F9E /* SettingsAboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F6DDC92BCFBDFF00362F9E /* SettingsAboutViewController.swift */; };
+		B2F6DDCC2BCFBE2A00362F9E /* SettingsAboutViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F6DDCB2BCFBE2A00362F9E /* SettingsAboutViewModel.swift */; };
+		B2F6DDCF2BCFBF3A00362F9E /* SettingsTabCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F6DDCE2BCFBF3A00362F9E /* SettingsTabCellModel.swift */; };
+		B2F6DDD12BCFC2F300362F9E /* SettingsTabSettingsItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F6DDD02BCFC2F300362F9E /* SettingsTabSettingsItemCell.swift */; };
 		E5A6039FD407F7A53A369DAE /* libPods-GitWorldTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 25BA582A9A1EA9C451E97455 /* libPods-GitWorldTests.a */; };
 		E5FFDB23E5B722154F449DBD /* libPods-GitWorld.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A2D93FAD0234B92331517B5 /* libPods-GitWorld.a */; };
 /* End PBXBuildFile section */
@@ -114,6 +122,14 @@
 		B2CA53782B984E5800D16E74 /* LoadingProgressLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingProgressLine.swift; sourceTree = "<group>"; };
 		B2CA537A2B98622600D16E74 /* RepositoryCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryCellModel.swift; sourceTree = "<group>"; };
 		B2CA537D2B98656A00D16E74 /* RepositoryDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryDatabase.swift; sourceTree = "<group>"; };
+		B2F6DDBF2BCFBC8D00362F9E /* SettingsTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTabViewController.swift; sourceTree = "<group>"; };
+		B2F6DDC12BCFBCB100362F9E /* SettingsTabCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTabCoordinator.swift; sourceTree = "<group>"; };
+		B2F6DDC32BCFBCC300362F9E /* SettingsTabNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTabNavigator.swift; sourceTree = "<group>"; };
+		B2F6DDC52BCFBCD500362F9E /* SettingsTabViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTabViewModel.swift; sourceTree = "<group>"; };
+		B2F6DDC92BCFBDFF00362F9E /* SettingsAboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsAboutViewController.swift; sourceTree = "<group>"; };
+		B2F6DDCB2BCFBE2A00362F9E /* SettingsAboutViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsAboutViewModel.swift; sourceTree = "<group>"; };
+		B2F6DDCE2BCFBF3A00362F9E /* SettingsTabCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTabCellModel.swift; sourceTree = "<group>"; };
+		B2F6DDD02BCFC2F300362F9E /* SettingsTabSettingsItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTabSettingsItemCell.swift; sourceTree = "<group>"; };
 		B2FC2AE92BA42D71000F613D /* DebugConfig.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = DebugConfig.xcconfig; sourceTree = "<group>"; };
 		B2FC2AEA2BA4304F000F613D /* ReleaseConfig.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = ReleaseConfig.xcconfig; sourceTree = "<group>"; };
 		C9E965CB4E175543C479B284 /* Pods-GitWorldTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitWorldTests.debug.xcconfig"; path = "Target Support Files/Pods-GitWorldTests/Pods-GitWorldTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -254,7 +270,7 @@
 			children = (
 				B2A0DCB52BA985F600C6EFB8 /* Collect */,
 				B27CB39F2B68985F00742E3D /* Search */,
-				B27CB39E2B6896E000742E3D /* Mine */,
+				B27CB39E2B6896E000742E3D /* Settings */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -311,11 +327,16 @@
 			path = Repositories;
 			sourceTree = "<group>";
 		};
-		B27CB39E2B6896E000742E3D /* Mine */ = {
+		B27CB39E2B6896E000742E3D /* Settings */ = {
 			isa = PBXGroup;
 			children = (
+				B2F6DDBA2BCFBC4D00362F9E /* Coordinator */,
+				B2F6DDBB2BCFBC5400362F9E /* ViewModels */,
+				B2F6DDBE2BCFBC6700362F9E /* Views */,
+				B2F6DDBD2BCFBC6000362F9E /* ViewControllers */,
+				B2F6DDBC2BCFBC5A00362F9E /* Models */,
 			);
-			path = Mine;
+			path = Settings;
 			sourceTree = "<group>";
 		};
 		B27CB39F2B68985F00742E3D /* Search */ = {
@@ -426,6 +447,49 @@
 				B2CA537D2B98656A00D16E74 /* RepositoryDatabase.swift */,
 			);
 			path = Database;
+			sourceTree = "<group>";
+		};
+		B2F6DDBA2BCFBC4D00362F9E /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				B2F6DDC12BCFBCB100362F9E /* SettingsTabCoordinator.swift */,
+				B2F6DDC32BCFBCC300362F9E /* SettingsTabNavigator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		B2F6DDBB2BCFBC5400362F9E /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				B2F6DDC52BCFBCD500362F9E /* SettingsTabViewModel.swift */,
+				B2F6DDCB2BCFBE2A00362F9E /* SettingsAboutViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		B2F6DDBC2BCFBC5A00362F9E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B2F6DDCE2BCFBF3A00362F9E /* SettingsTabCellModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		B2F6DDBD2BCFBC6000362F9E /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				B2F6DDBF2BCFBC8D00362F9E /* SettingsTabViewController.swift */,
+				B2F6DDC92BCFBDFF00362F9E /* SettingsAboutViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		B2F6DDBE2BCFBC6700362F9E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B2F6DDD02BCFC2F300362F9E /* SettingsTabSettingsItemCell.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -670,14 +734,20 @@
 				B2CA53752B984AB700D16E74 /* RepositoryDetailViewController.swift in Sources */,
 				B27CB3AD2B689D3E00742E3D /* SearchTabViewModel.swift in Sources */,
 				B2CA537E2B98656A00D16E74 /* RepositoryDatabase.swift in Sources */,
+				B2F6DDD12BCFC2F300362F9E /* SettingsTabSettingsItemCell.swift in Sources */,
+				B2F6DDCA2BCFBDFF00362F9E /* SettingsAboutViewController.swift in Sources */,
 				B2CA53792B984E5800D16E74 /* LoadingProgressLine.swift in Sources */,
 				B2A0DCC32BA987B000C6EFB8 /* CollectTabUseCase.swift in Sources */,
+				B2F6DDC42BCFBCC300362F9E /* SettingsTabNavigator.swift in Sources */,
 				B2AFC31F2B8893EB003BE5D5 /* AppCoordinator.swift in Sources */,
 				B2C207872B99B2B900A4907D /* SearchRepositoryListSecionModel.swift in Sources */,
+				B2F6DDC62BCFBCD500362F9E /* SettingsTabViewModel.swift in Sources */,
 				B27CB3AF2B689DC300742E3D /* RepositoryEntity.swift in Sources */,
 				B2A0DCC52BA98C2F00C6EFB8 /* CollectTabViewController+TableView.swift in Sources */,
+				B2F6DDCF2BCFBF3A00362F9E /* SettingsTabCellModel.swift in Sources */,
 				B21533982B4D1C2F00C99FC6 /* AppDelegate.swift in Sources */,
 				B2895E1F2B8EDBEC00F41FFD /* SearchTabRepository.swift in Sources */,
+				B2F6DDC02BCFBC8D00362F9E /* SettingsTabViewController.swift in Sources */,
 				B2CA53772B984ACA00D16E74 /* RepositoryDetailViewModel.swift in Sources */,
 				B215339A2B4D1C2F00C99FC6 /* SceneDelegate.swift in Sources */,
 				B2AFC3192B88929D003BE5D5 /* AppDependencies.swift in Sources */,
@@ -686,8 +756,10 @@
 				B27CB3AB2B689C8500742E3D /* SearchTabViewController.swift in Sources */,
 				B2AFC3242B889443003BE5D5 /* SearchTabNavigator.swift in Sources */,
 				B2CA537B2B98622600D16E74 /* RepositoryCellModel.swift in Sources */,
+				B2F6DDC22BCFBCB100362F9E /* SettingsTabCoordinator.swift in Sources */,
 				B2A0DCBD2BA986BE00C6EFB8 /* CollectTabNavigator.swift in Sources */,
 				B2A0DCC12BA9874800C6EFB8 /* CollectTabViewController.swift in Sources */,
+				B2F6DDCC2BCFBE2A00362F9E /* SettingsAboutViewModel.swift in Sources */,
 				B2895E212B8EDC2F00F41FFD /* StandardSearchTabRepository.swift in Sources */,
 				B2A0DCBB2BA986A800C6EFB8 /* CollectCoordinator.swift in Sources */,
 				B2895E422B8F309D00F41FFD /* SearchTabViewController+TableView.swift in Sources */,
