@@ -7,22 +7,16 @@
 
 import UIKit
 import Platform
-import RxSwift
+import Combine
 import SnapKit
-import ESPullToRefresh
+import SwiftUI
 
-class CollectTabViewController: BaseViewController {
+class CollectTabViewController: UIHostingController<CollectTabPageView> {
     let viewModel: CollectTabViewModel
-    private var bags: DisposeBag = .init()
-    private let getRepositoryListSubject: PublishSubject<Void> = .init()
-    lazy var tableView: UITableView = {
-        let tableView = UITableView(frame: .zero, style: .plain)
-        return tableView
-    }()
     
     init(viewModel: CollectTabViewModel) {
         self.viewModel = viewModel
-        super.init(nibName: nil, bundle: nil)
+        super.init(rootView: CollectTabPageView(viewModel: viewModel))
     }
     
     required init?(coder: NSCoder) {
@@ -31,44 +25,8 @@ class CollectTabViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        setupViews()
-        setupBindings()
         
-        getRepositoryListSubject.onNext(())
-    }
-
-    private func setupViews() {
         self.title = "收藏"
-        
-        setupTableView()
-        view.addSubview(tableView)
-        tableView.es.addPullToRefresh { [weak self] in
-            self?.getRepositoryListSubject.onNext(())
-        }
-        
-        tableView.snp.makeConstraints { make in
-            make.edges.equalToSuperview()
-        }
-    }
-    
-    private func setupBindings() {
-        
-        let getRepositoryListDriver = getRepositoryListSubject.do(onNext: { _ in
-            LoadingView.show()
-        }).asDriver(onErrorJustReturn: ())
-        let input = CollectTabViewModel.Input(queryAllRepositories: getRepositoryListDriver)
-        let output = viewModel.transform(input)
-        
-        output.cellModels.drive { [weak self] result in
-            LoadingView.hide()
-            self?.tableView.es.stopPullToRefresh()
-            switch result {
-            case .success:
-                self?.tableView.reloadData()
-            case .failure(let error):
-                print(error.localizedDescription)
-            }
-        }.disposed(by: bags)
+        viewModel.loadData()
     }
 }

@@ -15,19 +15,21 @@
 		B21533AF2B4D1C3200C99FC6 /* GitWorldTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21533AE2B4D1C3200C99FC6 /* GitWorldTests.swift */; };
 		B21533B92B4D1C3200C99FC6 /* GitWorldUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21533B82B4D1C3200C99FC6 /* GitWorldUITests.swift */; };
 		B21533BB2B4D1C3200C99FC6 /* GitWorldUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21533BA2B4D1C3200C99FC6 /* GitWorldUITestsLaunchTests.swift */; };
-		B27CB3AB2B689C8500742E3D /* SearchTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27CB3AA2B689C8500742E3D /* SearchTabViewController.swift */; };
+		B21AA73F2BFB2F5A00DF6A4C /* CommonDefines.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21AA73E2BFB2F5A00DF6A4C /* CommonDefines.swift */; };
+		B21AA7422BFB345E00DF6A4C /* CollectTabPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21AA7412BFB345E00DF6A4C /* CollectTabPageView.swift */; };
+		B21AA7442BFB35E700DF6A4C /* SearchTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21AA7432BFB35E700DF6A4C /* SearchTabViewController.swift */; };
+		B21AA7462BFB3AAA00DF6A4C /* SettingsTabItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21AA7452BFB3AAA00DF6A4C /* SettingsTabItemView.swift */; };
+		B21AA7482BFB3AB700DF6A4C /* SettingsTabPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21AA7472BFB3AB700DF6A4C /* SettingsTabPageView.swift */; };
+		B25007272BD22EB600464FA6 /* SearchTabPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25007262BD22EB600464FA6 /* SearchTabPageView.swift */; };
 		B27CB3AD2B689D3E00742E3D /* SearchTabViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27CB3AC2B689D3E00742E3D /* SearchTabViewModel.swift */; };
 		B27CB3AF2B689DC300742E3D /* RepositoryEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27CB3AE2B689DC300742E3D /* RepositoryEntity.swift */; };
 		B2895E1F2B8EDBEC00F41FFD /* SearchTabRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2895E1E2B8EDBEC00F41FFD /* SearchTabRepository.swift */; };
 		B2895E212B8EDC2F00F41FFD /* StandardSearchTabRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2895E202B8EDC2F00F41FFD /* StandardSearchTabRepository.swift */; };
-		B2895E422B8F309D00F41FFD /* SearchTabViewController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2895E412B8F309D00F41FFD /* SearchTabViewController+TableView.swift */; };
-		B2895E452B8F31A200F41FFD /* RepositoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2895E442B8F31A200F41FFD /* RepositoryCell.swift */; };
 		B2A0DCBB2BA986A800C6EFB8 /* CollectCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A0DCBA2BA986A800C6EFB8 /* CollectCoordinator.swift */; };
 		B2A0DCBD2BA986BE00C6EFB8 /* CollectTabNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A0DCBC2BA986BE00C6EFB8 /* CollectTabNavigator.swift */; };
 		B2A0DCBF2BA9871400C6EFB8 /* CollectTabViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A0DCBE2BA9871400C6EFB8 /* CollectTabViewModel.swift */; };
 		B2A0DCC12BA9874800C6EFB8 /* CollectTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A0DCC02BA9874800C6EFB8 /* CollectTabViewController.swift */; };
 		B2A0DCC32BA987B000C6EFB8 /* CollectTabUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A0DCC22BA987B000C6EFB8 /* CollectTabUseCase.swift */; };
-		B2A0DCC52BA98C2F00C6EFB8 /* CollectTabViewController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A0DCC42BA98C2F00C6EFB8 /* CollectTabViewController+TableView.swift */; };
 		B2A0DCC72BA9933900C6EFB8 /* SearchTabViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A0DCC62BA9933900C6EFB8 /* SearchTabViewModelTests.swift */; };
 		B2A0DCC92BA9946F00C6EFB8 /* MockSearchTabUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A0DCC82BA9946F00C6EFB8 /* MockSearchTabUseCase.swift */; };
 		B2A0DCCB2BA994CB00C6EFB8 /* MockSearchTabNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A0DCCA2BA994CB00C6EFB8 /* MockSearchTabNavigator.swift */; };
@@ -38,6 +40,7 @@
 		B2AFC3222B889434003BE5D5 /* SearchTabCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2AFC3212B889434003BE5D5 /* SearchTabCoordinator.swift */; };
 		B2AFC3242B889443003BE5D5 /* SearchTabNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2AFC3232B889443003BE5D5 /* SearchTabNavigator.swift */; };
 		B2AFC3262B88964D003BE5D5 /* SearchTabUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2AFC3252B88964D003BE5D5 /* SearchTabUseCase.swift */; };
+		B2B3769D2BF6FC1F000E248A /* SearchTabCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2B3769C2BF6FC1F000E248A /* SearchTabCardView.swift */; };
 		B2C207872B99B2B900A4907D /* SearchRepositoryListSecionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C207862B99B2B900A4907D /* SearchRepositoryListSecionModel.swift */; };
 		B2CA53752B984AB700D16E74 /* RepositoryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CA53742B984AB700D16E74 /* RepositoryDetailViewController.swift */; };
 		B2CA53772B984ACA00D16E74 /* RepositoryDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CA53762B984ACA00D16E74 /* RepositoryDetailViewModel.swift */; };
@@ -82,7 +85,7 @@
 		84A0F85BD32A789A06041C70 /* Pods-GitWorldTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitWorldTests.release.xcconfig"; path = "Target Support Files/Pods-GitWorldTests/Pods-GitWorldTests.release.xcconfig"; sourceTree = "<group>"; };
 		95AC8FE80AE526410CCFC16D /* Pods-GitWorld.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitWorld.release.xcconfig"; path = "Target Support Files/Pods-GitWorld/Pods-GitWorld.release.xcconfig"; sourceTree = "<group>"; };
 		98048AA4FEFF57E4E7F9E588 /* Pods-GitWorld-GitWorldUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitWorld-GitWorldUITests.release.xcconfig"; path = "Target Support Files/Pods-GitWorld-GitWorldUITests/Pods-GitWorld-GitWorldUITests.release.xcconfig"; sourceTree = "<group>"; };
-		B21533942B4D1C2F00C99FC6 /* GitWorld.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitWorld.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B21533942B4D1C2F00C99FC6 /* Git-SwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Git-SwiftUI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B21533972B4D1C2F00C99FC6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B21533992B4D1C2F00C99FC6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		B21533A02B4D1C3200C99FC6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -93,19 +96,21 @@
 		B21533B42B4D1C3200C99FC6 /* GitWorldUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GitWorldUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B21533B82B4D1C3200C99FC6 /* GitWorldUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitWorldUITests.swift; sourceTree = "<group>"; };
 		B21533BA2B4D1C3200C99FC6 /* GitWorldUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitWorldUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		B27CB3AA2B689C8500742E3D /* SearchTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTabViewController.swift; sourceTree = "<group>"; };
+		B21AA73E2BFB2F5A00DF6A4C /* CommonDefines.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonDefines.swift; sourceTree = "<group>"; };
+		B21AA7412BFB345E00DF6A4C /* CollectTabPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectTabPageView.swift; sourceTree = "<group>"; };
+		B21AA7432BFB35E700DF6A4C /* SearchTabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTabViewController.swift; sourceTree = "<group>"; };
+		B21AA7452BFB3AAA00DF6A4C /* SettingsTabItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTabItemView.swift; sourceTree = "<group>"; };
+		B21AA7472BFB3AB700DF6A4C /* SettingsTabPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTabPageView.swift; sourceTree = "<group>"; };
+		B25007262BD22EB600464FA6 /* SearchTabPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTabPageView.swift; sourceTree = "<group>"; };
 		B27CB3AC2B689D3E00742E3D /* SearchTabViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTabViewModel.swift; sourceTree = "<group>"; };
 		B27CB3AE2B689DC300742E3D /* RepositoryEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryEntity.swift; sourceTree = "<group>"; };
 		B2895E1E2B8EDBEC00F41FFD /* SearchTabRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTabRepository.swift; sourceTree = "<group>"; };
 		B2895E202B8EDC2F00F41FFD /* StandardSearchTabRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardSearchTabRepository.swift; sourceTree = "<group>"; };
-		B2895E412B8F309D00F41FFD /* SearchTabViewController+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SearchTabViewController+TableView.swift"; sourceTree = "<group>"; };
-		B2895E442B8F31A200F41FFD /* RepositoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryCell.swift; sourceTree = "<group>"; };
 		B2A0DCBA2BA986A800C6EFB8 /* CollectCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectCoordinator.swift; sourceTree = "<group>"; };
 		B2A0DCBC2BA986BE00C6EFB8 /* CollectTabNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectTabNavigator.swift; sourceTree = "<group>"; };
 		B2A0DCBE2BA9871400C6EFB8 /* CollectTabViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectTabViewModel.swift; sourceTree = "<group>"; };
 		B2A0DCC02BA9874800C6EFB8 /* CollectTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectTabViewController.swift; sourceTree = "<group>"; };
 		B2A0DCC22BA987B000C6EFB8 /* CollectTabUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectTabUseCase.swift; sourceTree = "<group>"; };
-		B2A0DCC42BA98C2F00C6EFB8 /* CollectTabViewController+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CollectTabViewController+TableView.swift"; sourceTree = "<group>"; };
 		B2A0DCC62BA9933900C6EFB8 /* SearchTabViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTabViewModelTests.swift; sourceTree = "<group>"; };
 		B2A0DCC82BA9946F00C6EFB8 /* MockSearchTabUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSearchTabUseCase.swift; sourceTree = "<group>"; };
 		B2A0DCCA2BA994CB00C6EFB8 /* MockSearchTabNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSearchTabNavigator.swift; sourceTree = "<group>"; };
@@ -116,6 +121,7 @@
 		B2AFC3212B889434003BE5D5 /* SearchTabCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTabCoordinator.swift; sourceTree = "<group>"; };
 		B2AFC3232B889443003BE5D5 /* SearchTabNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTabNavigator.swift; sourceTree = "<group>"; };
 		B2AFC3252B88964D003BE5D5 /* SearchTabUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTabUseCase.swift; sourceTree = "<group>"; };
+		B2B3769C2BF6FC1F000E248A /* SearchTabCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTabCardView.swift; sourceTree = "<group>"; };
 		B2C207862B99B2B900A4907D /* SearchRepositoryListSecionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRepositoryListSecionModel.swift; sourceTree = "<group>"; };
 		B2CA53742B984AB700D16E74 /* RepositoryDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryDetailViewController.swift; sourceTree = "<group>"; };
 		B2CA53762B984ACA00D16E74 /* RepositoryDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryDetailViewModel.swift; sourceTree = "<group>"; };
@@ -203,7 +209,7 @@
 		B21533952B4D1C2F00C99FC6 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B21533942B4D1C2F00C99FC6 /* GitWorld.app */,
+				B21533942B4D1C2F00C99FC6 /* Git-SwiftUI.app */,
 				B21533AA2B4D1C3200C99FC6 /* GitWorldTests.xctest */,
 				B21533B42B4D1C3200C99FC6 /* GitWorldUITests.xctest */,
 			);
@@ -217,6 +223,7 @@
 				B258ED9F2B4D2B5800A8F5AD /* Scenes */,
 				B258EDA02B4D2B6200A8F5AD /* Domain */,
 				B258EDA12B4D2B6D00A8F5AD /* Data */,
+				B21AA73D2BFB2F3E00DF6A4C /* Common */,
 				B258ED9D2B4D2AE000A8F5AD /* Resources */,
 			);
 			path = GitWorld;
@@ -240,6 +247,22 @@
 				B21533BA2B4D1C3200C99FC6 /* GitWorldUITestsLaunchTests.swift */,
 			);
 			path = GitWorldUITests;
+			sourceTree = "<group>";
+		};
+		B21AA73D2BFB2F3E00DF6A4C /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				B21AA73E2BFB2F5A00DF6A4C /* CommonDefines.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		B21AA7402BFB344300DF6A4C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B21AA7412BFB345E00DF6A4C /* CollectTabPageView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		B258ED9D2B4D2AE000A8F5AD /* Resources */ = {
@@ -354,7 +377,8 @@
 		B27CB3A02B68986A00742E3D /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				B2895E442B8F31A200F41FFD /* RepositoryCell.swift */,
+				B25007262BD22EB600464FA6 /* SearchTabPageView.swift */,
+				B2B3769C2BF6FC1F000E248A /* SearchTabCardView.swift */,
 				B2CA53782B984E5800D16E74 /* LoadingProgressLine.swift */,
 			);
 			path = Views;
@@ -381,9 +405,8 @@
 		B2895E432B8F317400F41FFD /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				B27CB3AA2B689C8500742E3D /* SearchTabViewController.swift */,
-				B2895E412B8F309D00F41FFD /* SearchTabViewController+TableView.swift */,
 				B2CA53742B984AB700D16E74 /* RepositoryDetailViewController.swift */,
+				B21AA7432BFB35E700DF6A4C /* SearchTabViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -394,6 +417,7 @@
 				B2A0DCB62BA9860200C6EFB8 /* Coordinator */,
 				B2A0DCB72BA9865900C6EFB8 /* ViewModels */,
 				B2A0DCB82BA9866100C6EFB8 /* Models */,
+				B21AA7402BFB344300DF6A4C /* Views */,
 				B2A0DCB92BA9867200C6EFB8 /* ViewControllers */,
 			);
 			path = Collect;
@@ -427,7 +451,6 @@
 			isa = PBXGroup;
 			children = (
 				B2A0DCC02BA9874800C6EFB8 /* CollectTabViewController.swift */,
-				B2A0DCC42BA98C2F00C6EFB8 /* CollectTabViewController+TableView.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -488,6 +511,8 @@
 			isa = PBXGroup;
 			children = (
 				B2F6DDD02BCFC2F300362F9E /* SettingsTabSettingsItemCell.swift */,
+				B21AA7472BFB3AB700DF6A4C /* SettingsTabPageView.swift */,
+				B21AA7452BFB3AAA00DF6A4C /* SettingsTabItemView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -511,7 +536,7 @@
 			);
 			name = GitWorld;
 			productName = GitWorld;
-			productReference = B21533942B4D1C2F00C99FC6 /* GitWorld.app */;
+			productReference = B21533942B4D1C2F00C99FC6 /* Git-SwiftUI.app */;
 			productType = "com.apple.product-type.application";
 		};
 		B21533A92B4D1C3200C99FC6 /* GitWorldTests */ = {
@@ -742,8 +767,9 @@
 				B2AFC31F2B8893EB003BE5D5 /* AppCoordinator.swift in Sources */,
 				B2C207872B99B2B900A4907D /* SearchRepositoryListSecionModel.swift in Sources */,
 				B2F6DDC62BCFBCD500362F9E /* SettingsTabViewModel.swift in Sources */,
+				B21AA73F2BFB2F5A00DF6A4C /* CommonDefines.swift in Sources */,
 				B27CB3AF2B689DC300742E3D /* RepositoryEntity.swift in Sources */,
-				B2A0DCC52BA98C2F00C6EFB8 /* CollectTabViewController+TableView.swift in Sources */,
+				B25007272BD22EB600464FA6 /* SearchTabPageView.swift in Sources */,
 				B2F6DDCF2BCFBF3A00362F9E /* SettingsTabCellModel.swift in Sources */,
 				B21533982B4D1C2F00C99FC6 /* AppDelegate.swift in Sources */,
 				B2895E1F2B8EDBEC00F41FFD /* SearchTabRepository.swift in Sources */,
@@ -751,20 +777,22 @@
 				B2CA53772B984ACA00D16E74 /* RepositoryDetailViewModel.swift in Sources */,
 				B215339A2B4D1C2F00C99FC6 /* SceneDelegate.swift in Sources */,
 				B2AFC3192B88929D003BE5D5 /* AppDependencies.swift in Sources */,
+				B21AA7482BFB3AB700DF6A4C /* SettingsTabPageView.swift in Sources */,
 				B2AFC3222B889434003BE5D5 /* SearchTabCoordinator.swift in Sources */,
+				B21AA7462BFB3AAA00DF6A4C /* SettingsTabItemView.swift in Sources */,
 				B2AFC3122B888C21003BE5D5 /* AppAppearance.swift in Sources */,
-				B27CB3AB2B689C8500742E3D /* SearchTabViewController.swift in Sources */,
 				B2AFC3242B889443003BE5D5 /* SearchTabNavigator.swift in Sources */,
+				B2B3769D2BF6FC1F000E248A /* SearchTabCardView.swift in Sources */,
+				B21AA7442BFB35E700DF6A4C /* SearchTabViewController.swift in Sources */,
 				B2CA537B2B98622600D16E74 /* RepositoryCellModel.swift in Sources */,
+				B21AA7422BFB345E00DF6A4C /* CollectTabPageView.swift in Sources */,
 				B2F6DDC22BCFBCB100362F9E /* SettingsTabCoordinator.swift in Sources */,
 				B2A0DCBD2BA986BE00C6EFB8 /* CollectTabNavigator.swift in Sources */,
 				B2A0DCC12BA9874800C6EFB8 /* CollectTabViewController.swift in Sources */,
 				B2F6DDCC2BCFBE2A00362F9E /* SettingsAboutViewModel.swift in Sources */,
 				B2895E212B8EDC2F00F41FFD /* StandardSearchTabRepository.swift in Sources */,
 				B2A0DCBB2BA986A800C6EFB8 /* CollectCoordinator.swift in Sources */,
-				B2895E422B8F309D00F41FFD /* SearchTabViewController+TableView.swift in Sources */,
 				B2AFC3262B88964D003BE5D5 /* SearchTabUseCase.swift in Sources */,
-				B2895E452B8F31A200F41FFD /* RepositoryCell.swift in Sources */,
 				B2A0DCBF2BA9871400C6EFB8 /* CollectTabViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -947,7 +975,7 @@
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = GitWorld/Resources/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "$(APP_NAME)";
+				INFOPLIST_KEY_CFBundleDisplayName = GitWorlDebug;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -959,8 +987,8 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.monkey.GitWorld;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.monkey.GitWorld.swiftui;
+				PRODUCT_NAME = "Git-SwiftUI";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -979,7 +1007,7 @@
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = GitWorld/Resources/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "$(APP_NAME)";
+				INFOPLIST_KEY_CFBundleDisplayName = GitWorlDebug;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -991,8 +1019,8 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.monkey.GitWorld;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.monkey.GitWorld.swiftui;
+				PRODUCT_NAME = "Git-SwiftUI";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

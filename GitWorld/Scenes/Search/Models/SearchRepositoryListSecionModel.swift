@@ -6,19 +6,11 @@
 //
 
 import Foundation
-import RxDataSources
 
 struct SearchRepositoryListSecionModel {
     var items: [RepositoryCellModel]
     
     init(items: [RepositoryCellModel]) {
-        self.items = items
-    }
-}
-
-extension SearchRepositoryListSecionModel: SectionModelType {
-    init(original: SearchRepositoryListSecionModel, items: [RepositoryCellModel]) {
-        self = original
         self.items = items
     }
 }

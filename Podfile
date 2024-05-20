@@ -6,14 +6,11 @@ target 'GitWorld' do
   # Pods for GitWorld
   pod 'SnapKit', '~> 5.0'
   pod 'Kingfisher', '~> 7.0'
-  pod 'RxSwift', '6.6.0'
-  pod 'RxCocoa', '6.6.0'
   pod 'Moya', '~> 15.0'
-  pod 'Moya/RxSwift', '~> 15.0'
+  pod 'Moya/Combine', '~> 15.0'
   pod 'ProgressHUD', '14.1.0'
   pod "ESPullToRefresh", '2.9.3'
   pod 'SQLite.swift', '~> 0.14.1'
-  pod 'RxDataSources', '~> 5.0'
 
   # Local pods
   pod 'Networking', :path => './LocalPods/Networking'

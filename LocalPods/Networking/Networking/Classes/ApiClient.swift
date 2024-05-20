@@ -1,7 +1,8 @@
 
-import RxSwift
 import UIKit
 import Moya
+import Combine
+
 
 public enum HttpError: Error {
     case serverError
@@ -10,7 +11,7 @@ public enum HttpError: Error {
 }
 
 public protocol ApiClient {
-    func request<T: Decodable>(_ endpoint: ApiEndpointTargetType) -> Observable<T>
+    func request<T: Decodable>(_ endpoint: ApiEndpointTargetType) -> AnyPublisher<T, HttpError>
 }
 
 public class StandardApiClient: ApiClient {
@@ -21,7 +22,8 @@ public class StandardApiClient: ApiClient {
         
     }
     
-    public func request<T: Decodable>(_ endpoint: ApiEndpointTargetType) -> Observable<T> {
-        return provider.rx.request(endpoint).map(T.self).asObservable()
+    public func request<T: Decodable>(_ endpoint: ApiEndpointTargetType) -> AnyPublisher<T, HttpError> {
+        return provider.requestPublisher(endpoint).map(T.self).mapError { HttpError.someError($0) }.eraseToAnyPublisher()
+//        provider.rx.request(endpoint).map(T.self).asObservable()
     }
 }

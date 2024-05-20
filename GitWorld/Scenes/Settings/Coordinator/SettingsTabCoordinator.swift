@@ -25,6 +25,7 @@ final public class SettingsTabCoordinator {
 extension SettingsTabCoordinator: SettingsTabNavigator {
     func pushToAboutPage() {
         let vc = SettingsAboutViewController(viewModel: SettingsAboutViewModel())
+        vc.hidesBottomBarWhenPushed = true
         navigationController.pushViewController(vc, animated: true)
     }
 }

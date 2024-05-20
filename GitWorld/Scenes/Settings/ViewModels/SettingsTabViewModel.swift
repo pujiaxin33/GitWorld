@@ -7,18 +7,10 @@
 
 import Foundation
 import Platform
-import RxCocoa
+import Combine
 
-final class SettingsTabViewModel: ViewModelType {
-    struct Input {
-        let refreshCellModels: Driver<Void>
-    }
-    
-    struct Output {
-        let cellModels: Driver<[SettingsTabCellModel]>
-    }
-    
-    private(set) var cellModels: [SettingsTabCellModel] = []
+final class SettingsTabViewModel: ObservableObject {
+    @Published var cellModels: [SettingsTabCellModel] = []
     
     let navigator: SettingsTabNavigator
     
@@ -26,13 +18,8 @@ final class SettingsTabViewModel: ViewModelType {
         self.navigator = navigator
     }
     
-    func transform(_ input: Input) -> Output {
-        let cellModels = input.refreshCellModels.map { _ in
-            self.cellModels = self.getCellModels()
-            return self.cellModels
-        }
-        
-        return Output(cellModels: cellModels)
+    func loadData() {
+        cellModels = getCellModels()
     }
     
     func pushToAboutPage() {

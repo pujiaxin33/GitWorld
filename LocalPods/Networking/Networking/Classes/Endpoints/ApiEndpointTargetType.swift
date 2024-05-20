@@ -35,7 +35,7 @@ extension ApiEndpointTargetType: TargetType {
     public var task: Moya.Task {
         switch self {
         case let .repositories(string, index):
-            return .requestParameters(parameters: ["q": string, "page" : index], encoding: URLEncoding.default)
+            return .requestParameters(parameters: ["q": string, "page" : index, "per_page": 30], encoding: URLEncoding.default)
         }
     }
     

@@ -7,11 +7,14 @@
 
 import Foundation
 
-struct SettingsTabCellModel {
+struct SettingsTabCellModel: Identifiable {
     enum CellType {
         case about
     }
     
+    var id: String {
+        return title + icon
+    }
     let cellType: CellType
     let icon: String
     let title: String

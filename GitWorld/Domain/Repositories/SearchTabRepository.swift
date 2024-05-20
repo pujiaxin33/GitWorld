@@ -6,8 +6,9 @@
 //
 
 import Foundation
-import RxSwift
+import Combine
+import Networking
 
 protocol SearchTabRepository {
-    func requestRepositoriesList(keyWord: String, pageIndex: Int) -> Observable<[RepositoryEntity]>
+    func requestRepositoriesList(keyWord: String, pageIndex: Int) -> AnyPublisher<[RepositoryEntity], HttpError>
 }

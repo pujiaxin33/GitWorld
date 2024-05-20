@@ -7,11 +7,13 @@
 
 import Foundation
 
-class RepositoryCellModel {
-    let entity: RepositoryEntity
-    var isCollected: Bool = false
+class RepositoryCellModel: Identifiable {
     
-    init(entity: RepositoryEntity) {
+    let entity: RepositoryEntity
+    var isCollected: Bool
+    
+    init(entity: RepositoryEntity, isCollected: Bool = false) {
         self.entity = entity
+        self.isCollected = isCollected
     }
 }

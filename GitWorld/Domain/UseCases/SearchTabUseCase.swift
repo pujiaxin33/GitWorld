@@ -6,10 +6,11 @@
 //
 
 import Foundation
-import RxSwift
+import Combine
+import Networking
 
 protocol SearchTabUseCase {
-    func requestRepositoriesList(keyWord: String, pageIndex: Int) -> Observable<[RepositoryEntity]>
+    func requestRepositoriesList(keyWord: String, pageIndex: Int) -> AnyPublisher<[RepositoryEntity], HttpError>
     func collectRepository(_ entity: RepositoryEntity)
     func uncollectRepository(_ entity: RepositoryEntity)
     func getCollectedRepositoriesList() -> [RepositoryEntity]
@@ -24,7 +25,7 @@ class StandardSearchTabUseCase: SearchTabUseCase {
         self.database = database
     }
     
-    func requestRepositoriesList(keyWord: String, pageIndex: Int) -> Observable<[RepositoryEntity]> {
+    func requestRepositoriesList(keyWord: String, pageIndex: Int) -> AnyPublisher<[RepositoryEntity], HttpError> {
         return repository
             .requestRepositoriesList(keyWord: keyWord, pageIndex: pageIndex)
     }

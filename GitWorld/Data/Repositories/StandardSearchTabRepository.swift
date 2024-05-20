@@ -7,7 +7,7 @@
 
 import Foundation
 import Networking
-import RxSwift
+import Combine
 
 class StandardSearchTabRepository: SearchTabRepository {
     let apiClient: ApiClient
@@ -16,11 +16,11 @@ class StandardSearchTabRepository: SearchTabRepository {
         self.apiClient = apiClient
     }
     
-    func requestRepositoriesList(keyWord: String, pageIndex: Int) -> Observable<[RepositoryEntity]> {
-        let ob: Observable<RepositoryResult> = apiClient.request(.repositories(keyWord, pageIndex))
+    func requestRepositoriesList(keyWord: String, pageIndex: Int) -> AnyPublisher<[RepositoryEntity], HttpError> {
+        let ob: AnyPublisher<RepositoryResult, HttpError> = apiClient.request(.repositories(keyWord, pageIndex))
         return ob.map { result in
             result.items ?? []
-        }
+        }.eraseToAnyPublisher()
     }
     
 }

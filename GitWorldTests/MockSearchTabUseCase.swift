@@ -7,7 +7,7 @@
 
 import Foundation
 @testable import GitWorld
-import RxSwift
+import Combine
 
 class MockSearchTabUseCase: SearchTabUseCase {
     var isCollectRepositoryCalled: Bool = false
